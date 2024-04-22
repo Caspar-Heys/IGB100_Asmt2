@@ -2,28 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopEntry : MonoBehaviour
+public class ShopEntry : MonoBehaviour, IInteractable
 {
-    private bool inRange = false;
-    // Start is called before the first frame update
-    void Start()
+    public GameObject ShopUI;
+    public void Interact()
     {
-        
-    }
+        ShopUI.SetActive(true);
+        GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (inRange && Input.GetKeyDown("e"))
-            Debug.Log("balls and cock");
     }
-
-    private void OnTriggerStay(Collider other)
+    private void Start()
     {
- 
-        if(other.gameObject.tag == "Shop")
+        ShopUI.SetActive(false);
+    }
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.Escape))
         {
-            inRange = true;
+            ExitShop();
         }
     }
+    
+    private void ExitShop()
+    {
+        ShopUI.SetActive(false);
+        GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
 }
