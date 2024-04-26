@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
         uiController.GetComponent<UIController>().ShowPlayerUI();
         menu = false;
         startTime = Time.time;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void GameOver()

@@ -21,7 +21,8 @@ public class ShopEntry : MonoBehaviour, IInteractable
     {
         if(Input.GetKey(KeyCode.Escape))
         {
-            ExitShop();
+            if(ShopUI.activeInHierarchy)
+                ExitShop();
         }
     }
     

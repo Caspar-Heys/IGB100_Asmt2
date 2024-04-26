@@ -8,7 +8,7 @@ public class Grimbrand : MonoBehaviour
     public GameObject uiController;
     // fire variables
     public float damage = 50.0f;
-    public float fireRate = 0.15f;
+    public float fireRate = 0;
     private float fireTimer = 0.0f;
 
     public float magazine = 12;
@@ -43,21 +43,20 @@ public class Grimbrand : MonoBehaviour
 
     private void WeaponFiring()
     {
-        if (Input.GetMouseButton(0) && Time.time > fireTimer) 
+        if (Input.GetMouseButtonDown(0) && Time.time > fireTimer) 
         {
             if (magazine > 0) // fire
             {
                 Instantiate(fireSound, transform.position, transform.rotation);
                 Instantiate(muzzleFlash, muzzle.transform.position, muzzle.transform.rotation);
                 animation.Play("Fire");
-
-                RaycastHit hit;
-                if (Physics.Raycast(muzzle.transform.position, -(muzzle.transform.position - raycastTarget.transform.position).normalized, out hit, 50.0f))
+                Ray ray = new Ray(muzzle.transform.position, muzzle.transform.forward);
+                if (Physics.Raycast(ray, out RaycastHit HitInfo, 50f))
                 {
-                    if (hit.transform.tag == "Enemy")
+                    if (HitInfo.transform.tag == "Enemy")
                     {
-                        hit.transform.GetComponent<Enemy>().TakeDamage(damage);
-                        Instantiate(bulletHit, hit.transform.position, hit.transform.rotation);
+                        HitInfo.transform.GetComponent<Enemy>().TakeDamage(damage);
+                        Instantiate(bulletHit, HitInfo.transform.position, HitInfo.transform.rotation);
                     }
                 }
                 magazine--;

@@ -3,27 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIController : MonoBehaviour
 {
     public GameObject menuUI;
     public GameObject instructionsUI;
     public GameObject optionsUI;
-    
+    public GameObject InteractPrompt;
     public GameObject playerUI;
     public Slider healthBar;
     public Slider killIntentionBar;
     public Slider magazineBar;
-    public Text hpTxt;
-    public Text kiTxt;
+    public TMP_Text hpTxt;
+    public TMP_Text kiTxt;
     public GameObject pressF;
-    public Text magazineTxt;
+    public TMP_Text magazineTxt;
 
     public GameObject pauseUI;
     public GameObject winUI;
     public GameObject loseUI;
 
-    public Text fpsUI;
+    public TMP_Text fpsUI;
 
     private int fps;
     private float fpsDisplayCD = 1.0f;
@@ -34,6 +35,7 @@ public class UIController : MonoBehaviour
     {
         menuUI.SetActive(true);
         instructionsUI.SetActive(false);
+        playerUI.SetActive(false);
         optionsUI.SetActive(false);
         pauseUI.SetActive(false);
         winUI.SetActive(false);
@@ -100,7 +102,7 @@ public class UIController : MonoBehaviour
         pauseUI.SetActive(false);
         GameManager.instance.mainCamera.SetActive(false);
         GameManager.instance.player.SetActive(true);
-       
+        Cursor.lockState = CursorLockMode.Locked;
         playerUI.SetActive(true);
     }
     public void RestartScene()

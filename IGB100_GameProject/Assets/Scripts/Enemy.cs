@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour {
     //Public method for taking damage and dying
     public void TakeDamage(float dmg) {
         health -= dmg;
-
+        Debug.Log("hit");
         if (health <= 0) {
             Instantiate(deathEffect, transform.position, transform.rotation);
             GameManager.instance.token += token;

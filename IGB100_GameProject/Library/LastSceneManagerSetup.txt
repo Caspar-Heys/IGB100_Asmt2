@@ -1,8 +1,4 @@
 sceneSetups:
-- path: Assets/FPS.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
 - path: Assets/Scenes/Scene01.unity
   isLoaded: 1
   isActive: 1
