@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Shop
   - InteractionPrompt
+  - Terrain
+  - Enemy
+  - GameManager
   layers:
   - Default
   - TransparentFX

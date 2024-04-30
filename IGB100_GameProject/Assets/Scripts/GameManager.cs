@@ -15,14 +15,13 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     public GameObject player;
-    public GameObject playerStartPosition;
-    public GameObject mainCamera;
     public GameObject uiController;
 
     public bool win = false;
     public bool gameOver = false;
-    public bool menu = true;
+    public bool menu = false;
     public bool pause = false;
+    public bool hasPlayed = false;
 
     public int token = 0;
     public int score = 0;
@@ -51,41 +50,35 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //player = GameObject.FindGameObjectWithTag("Player");
-        player.SetActive(false);
-        mainCamera.SetActive(true);
+        Time.timeScale = 1;
+        Debug.Log("game start");
+        level01 = Instantiate(level01Prefeb, transform.position, transform.rotation);
+        startTime = Time.time;
+        Cursor.lockState = CursorLockMode.Locked;
+        player.GetComponent<Player>().health = 100;
+        gameOver = false;
+        win = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         //time += Time.deltaTime;
-        
+
         
     }
 
-    public void StartLevel()
-    { 
-        gameOver = false;
-        win = false;
-        mainCamera.SetActive(false);
-        player.SetActive(true);
-        player.transform.position = playerStartPosition.transform.position;
-        player.GetComponent<Player>().health = 100;
-        //player.GetComponent<Player>().killIntention = 0;
-        level01 = Instantiate(level01Prefeb, transform.position, transform.rotation);
-        uiController.GetComponent<UIController>().ShowPlayerUI();
-        menu = false;
-        startTime = Time.time;
-        Cursor.lockState = CursorLockMode.Locked;
-    }
 
     public void GameOver()
     {
         gameOver = true;
-        Destroy(level01);
-        player.SetActive(false);
-        mainCamera.SetActive(true);
+        Time.timeScale = 0;
+        GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = false;
+        //Destroy(level01);
+        //player.SetActive(false);
         if (win)
         {
             uiController.GetComponent<UIController>().ShowWinUI();

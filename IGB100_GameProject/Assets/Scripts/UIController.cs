@@ -7,9 +7,7 @@ using TMPro;
 
 public class UIController : MonoBehaviour
 {
-    public GameObject menuUI;
-    public GameObject instructionsUI;
-    public GameObject optionsUI;
+
     public GameObject InteractPrompt;
     public GameObject playerUI;
     public Slider healthBar;
@@ -33,23 +31,16 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        menuUI.SetActive(true);
-        instructionsUI.SetActive(false);
-        playerUI.SetActive(false);
-        optionsUI.SetActive(false);
-        pauseUI.SetActive(false);
-        winUI.SetActive(false);
-        loseUI.SetActive(false);
+        ShowPlayerUI();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.instance.menu && !GameManager.instance.pause && (Input.GetKey("p")|| Input.GetKey("escape")))
+        if (playerUI.activeInHierarchy && (Input.GetKey("p")|| Input.GetKey("escape")))
         {
             PauseGame();
             // show pause ui and cursor
-            
         }
         if (Time.time > fpsDisplayTimer)
         {
@@ -60,56 +51,43 @@ public class UIController : MonoBehaviour
         
     }
 
-    
+
     public void BackToMenu()
     {
-        menuUI.SetActive(true);
-        instructionsUI.SetActive(false);
-        optionsUI.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
     }
-    public void ShowInstructionsUI()
-    {  
-        menuUI.SetActive(false);
-        instructionsUI.SetActive(true);
-    }
-    public void ShowOptionsUI()
-    {
-        menuUI.SetActive(false);
-        optionsUI.SetActive(true);
-    }
+
     public void ShowPlayerUI()
     {
         playerUI.SetActive(true);
-        menuUI.SetActive(false);
         winUI.SetActive(false);
         loseUI.SetActive(false);
+        pauseUI.SetActive(false);
     }
     public void PauseGame()
     {
         Time.timeScale = 0.0f;
         GameManager.instance.pause = true;
         pauseUI.SetActive(true);
-        GameManager.instance.player.SetActive(false);
-        GameManager.instance.mainCamera.SetActive(true);
         playerUI.SetActive(false);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = false;
     }
     public void UnPauseGame()
     {
         Time.timeScale = 1.0f;
         GameManager.instance.pause = false;
         pauseUI.SetActive(false);
-        GameManager.instance.mainCamera.SetActive(false);
-        GameManager.instance.player.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         playerUI.SetActive(true);
-    }
-    public void RestartScene()
-    {
-        SceneManager.LoadScene("Scene01");
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = true;
     }
     public void ShowWinUI()
     {

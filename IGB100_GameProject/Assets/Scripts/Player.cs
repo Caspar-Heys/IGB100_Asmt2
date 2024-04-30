@@ -29,7 +29,6 @@ public class Player : MonoBehaviour {
         {
             UseUltimateSkill();
         }
-
     }
 
     public void TakeDamage(float dmg) {
@@ -48,7 +47,6 @@ public class Player : MonoBehaviour {
         if (health <= 0) {
             GameManager.instance.GameOver();
             GameManager.instance.win = false;
-            this.gameObject.SetActive(false);
         }
     }
 
