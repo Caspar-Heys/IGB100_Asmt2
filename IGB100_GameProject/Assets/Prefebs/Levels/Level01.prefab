@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 3233150227448364714, guid: ce95ac19bc4ede641b263f8341bd0efd, type: 3}
-  waitingTime: 2
+  waitingTime: 5
   spawnRate: 5
   spawnNumber: 1
   rngX: 0
@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4067787667926094355
 Transform:
   m_ObjectHideFlags: 0
@@ -129,9 +129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2905702306493850662, guid: 5320ba136369b5b46a70fb05f874cb9e, type: 3}
-  waitingTime: 10
+  waitingTime: 2
   spawnRate: 5
-  spawnNumber: 5
+  spawnNumber: 1
   rngX: 0
   rngZ: 0
 --- !u!1 &8324126805254831778
@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1241721130001494691
 Transform:
   m_ObjectHideFlags: 0
@@ -181,6 +181,6 @@ MonoBehaviour:
   enemy: {fileID: 8498245027367415002, guid: 2e0138631c073254686d49b83b0e23f5, type: 3}
   waitingTime: 0
   spawnRate: 2
-  spawnNumber: 5
+  spawnNumber: 1
   rngX: 0
   rngZ: 0
