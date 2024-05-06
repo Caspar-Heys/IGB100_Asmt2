@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567c425796ced0147ac844b19ad3a775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  healthMax: 100
   hitDamage: 5
   killIntention: 10
   token: 1
@@ -351,5 +351,5 @@ MonoBehaviour:
   fireString: 3
   bulletSpeedDown: 1
   firingAnimationCD: 1
-  enemybullet: {fileID: 73295874713200220, guid: 2158cdb297350c14f846697e33d9938e, type: 3}
+  enemybullet: {fileID: 73295874713200220, guid: 9257578efd5f60949ba87efbf627ab8c, type: 3}
   muzzle: {fileID: 664897562146820210}

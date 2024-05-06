@@ -1805,6 +1805,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3042200315960950108, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
+      propertyPath: bossUI
+      value: 
+      objectReference: {fileID: 489360617}
+    - target: {fileID: 3042200315960950108, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
+      propertyPath: bossHpBar
+      value: 
+      objectReference: {fileID: 1467032614}
     - target: {fileID: 3584026267620729845, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 888.7

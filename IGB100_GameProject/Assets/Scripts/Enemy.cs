@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour {
         if (isBoss )
         {
             GameManager.instance.UpdateBossHpBar(health, healthMax);
-            if (health < healthMax / 2)
+            if (GetComponent<BossManagement>().GetBattleStage() == 1 && health < healthMax / 2)
             {
                 GetComponent<BossManagement>().SetBattleStage(2);
             }

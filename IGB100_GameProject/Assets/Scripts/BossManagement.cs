@@ -7,7 +7,9 @@ public class BossManagement : MonoBehaviour
 {
     UnityEngine.AI.NavMeshAgent agent;
     private GameObject player;
-    public GameObject muzzle;
+    public GameObject muzzleL;
+    public GameObject muzzleR;
+    private GameObject muzzle;
     public GameObject bossBullet;
     private Quaternion rotation;
 
@@ -27,6 +29,15 @@ public class BossManagement : MonoBehaviour
     public float shootSpreadAngle = 10.0f;
     public int shootSpreadNumber = 7;
     private int subNumber;
+    public float bulletSpeed = 10.0f;
+    private bool isLeftMuzzle = true;
+
+    // for stage 2
+    private bool locked = false;
+    private Vector3 TargetPosition;
+    public float speed = 5.0f;
+    public float chargeSpeed = 8.0f;
+
     
 
 
@@ -36,6 +47,7 @@ public class BossManagement : MonoBehaviour
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.FindWithTag("Player");
         shootSpreadRound = shootSpreadRoundMax;
+        agent.speed = speed;
     }
 
     // Update is called once per frame
@@ -48,6 +60,8 @@ public class BossManagement : MonoBehaviour
             {
                 firing = false;
                 GetComponent<Enemy>().SetFiring(false);
+                locked = false;
+                agent.speed = speed;
             }
             
         }
@@ -72,7 +86,7 @@ public class BossManagement : MonoBehaviour
                 agent.destination = waypoints[currentWaypointIndex].position;
                 distanceXZ = (transform.position.x - waypoints[currentWaypointIndex].position.x) * (transform.position.x - waypoints[currentWaypointIndex].position.x) + (transform.position.z - waypoints[currentWaypointIndex].position.z) * (transform.position.z - waypoints[currentWaypointIndex].position.z);
                 // if close enough, change current waypoint to the next one
-                if (distanceXZ < 1.0f)
+                if (distanceXZ < 0.2f)
                 {
                     currentWaypointIndex++;
                     //firingAnimationTimer = Time.time;
@@ -88,7 +102,24 @@ public class BossManagement : MonoBehaviour
         }
         else if (battleStage == 2)
         {
-
+            if (!locked)
+            {
+                TargetPosition = player.transform.position;
+                agent.destination = TargetPosition;
+                locked = true;
+                agent.speed = chargeSpeed;
+            }
+            else
+            {
+                distanceXZ = (transform.position.x - TargetPosition.x) * (transform.position.x - TargetPosition.x) + (transform.position.z - TargetPosition.z) * (transform.position.z - TargetPosition.z);
+                // if close enough, 
+                if (distanceXZ < 0.2f)
+                {
+                    firing = true;
+                    shootSpreadRound = shootSpreadRoundMax;
+                    GetComponent<Enemy>().SetFiring(true);
+                }
+            }
         }
         
     }
@@ -100,6 +131,14 @@ public class BossManagement : MonoBehaviour
         { 
             if (shootSpreadRound > 0)
             {
+                if (isLeftMuzzle)
+                {
+                    muzzle = muzzleL;
+                }
+                else
+                {
+                    muzzle = muzzleR;
+                }
                 if (shootSpreadRound % 2 == 0)
                 {
                     subNumber = shootSpreadNumber;
@@ -110,17 +149,29 @@ public class BossManagement : MonoBehaviour
                 }
                 for (int j = 0; j < subNumber; j++)
                 {
-                    Instantiate(bossBullet, muzzle.transform.position, rotation * Quaternion.Euler(0f, shootSpreadAngle * (-subNumber + 1 + j * 2), 0f));
+                    GameObject enemyBullet = Instantiate(bossBullet, muzzle.transform.position, rotation * Quaternion.Euler(0f, shootSpreadAngle * (-subNumber + 1 + j * 2), 0f));
+                    enemyBullet.GetComponent<EnemyBulletRed>().SetSpeed(bulletSpeed);
                 }
                 shootSpreadRound--;
+                isLeftMuzzle = !isLeftMuzzle;
             }
             shootSpreadTimer = Time.time + shootSpreadRate;
         }
-        
     }
     public void SetBattleStage(int bs)
     {
         battleStage = bs;
+        if (bs == 2)
+        {
+            bulletSpeed = bulletSpeed * 1.5f;
+            shootSpreadRate = shootSpreadRate / 1.5f;
+            shootSpreadRoundMax = shootSpreadRoundMax * 2;
+        }
+        
+    }
+    public int GetBattleStage()
+    {
+        return battleStage;
     }
 
 }

@@ -120,7 +120,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -171,8 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c891cd712480fca45ae3298ccc34b16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muzzle: {fileID: 4858408508641911962}
-  bossBullet: {fileID: 73295874713200220, guid: 2158cdb297350c14f846697e33d9938e, type: 3}
+  muzzleL: {fileID: 4858408508641911962}
+  muzzleR: {fileID: 2034358839914785663}
+  bossBullet: {fileID: 73295874713200220, guid: 9257578efd5f60949ba87efbf627ab8c, type: 3}
   waypoints:
   - {fileID: 6943339862227310676, guid: 8e378f4387151c94980c57e36641335d, type: 3}
   - {fileID: 9031368670712900683, guid: 72267e7a8a25ae64cbf04b4b696a1a0b, type: 3}
@@ -182,6 +183,9 @@ MonoBehaviour:
   shootSpreadRate: 1
   shootSpreadAngle: 10
   shootSpreadNumber: 7
+  bulletSpeed: 8
+  speed: 16
+  chargeSpeed: 24
 --- !u!1 &4858408508641911962
 GameObject:
   m_ObjectHideFlags: 0
