@@ -84,6 +84,7 @@ MonoBehaviour:
   spawnNumber: 1
   rngX: 0
   rngZ: 0
+  isBoss: 1
 --- !u!1 &3847048893100748533
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +135,7 @@ MonoBehaviour:
   spawnNumber: 1
   rngX: 0
   rngZ: 0
+  isBoss: 0
 --- !u!1 &8324126805254831778
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,3 +186,4 @@ MonoBehaviour:
   spawnNumber: 1
   rngX: 0
   rngZ: 0
+  isBoss: 0

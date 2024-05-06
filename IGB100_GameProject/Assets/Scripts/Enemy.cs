@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour {
 
     
-    public float health = 100;
+    public float healthMax = 100;
+    private float health;
     public float hitDamage = 25;
     private float damageTimer;
     private float damageRate = 1.0f;
@@ -24,7 +25,7 @@ public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+        health = healthMax;
     }
 	
 	// Update is called once per frame
@@ -36,6 +37,15 @@ public class Enemy : MonoBehaviour {
     public void TakeDamage(float dmg) {
         health -= dmg;
         Debug.Log("hit");
+        if (isBoss )
+        {
+            GameManager.instance.UpdateBossHpBar(health, healthMax);
+            if (health < healthMax / 2)
+            {
+                GetComponent<BossManagement>().SetBattleStage(2);
+            }
+            
+        }
         if (health <= 0) {
             if (isBoss)
             {

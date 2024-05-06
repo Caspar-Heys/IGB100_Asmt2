@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public bool menu = false;
     public bool pause = false;
     public bool hasPlayed = false;
+    public bool bossFight = false;
 
     public int token = 0;
     public int score = 0;
@@ -92,6 +93,24 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
 
+    }
+
+    public void BossFight(bool b)
+    {
+        if (b)
+        {
+            uiController.GetComponent<UIController>().ShowBossUI();
+        }
+        else
+        {
+            uiController.GetComponent<UIController>().HideBossUI();
+        }
+        
+    }
+
+    public void UpdateBossHpBar(float hp, float hpMax)
+    {
+        uiController.GetComponent<UIController>().UpdateBossHpBar(hp, hpMax);
     }
    
 }

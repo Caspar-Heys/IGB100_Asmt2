@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     public Slider healthBar;
     public Slider killIntentionBar;
     public Slider magazineBar;
+    public Slider bossHpBar;
     public TMP_Text hpTxt;
     public TMP_Text kiTxt;
     public GameObject pressF;
@@ -21,6 +22,7 @@ public class UIController : MonoBehaviour
     public GameObject pauseUI;
     public GameObject winUI;
     public GameObject loseUI;
+    public GameObject bossUI;
 
     public TMP_Text fpsUI;
 
@@ -92,11 +94,13 @@ public class UIController : MonoBehaviour
     public void ShowWinUI()
     {
         playerUI.SetActive(false);
+        bossUI.SetActive(false);
         winUI.SetActive(true);
     }
     public void ShowLoseUI() 
     {
         playerUI.SetActive(false);
+        bossUI.SetActive(false);
         loseUI.SetActive(true);
     }
 
@@ -139,6 +143,18 @@ public class UIController : MonoBehaviour
             }
             
         }
+    }
+    public void ShowBossUI()
+    {
+        bossUI.SetActive(true);
+    }
+    public void HideBossUI()
+    {
+        bossUI.SetActive(false);
+    }
+    public void UpdateBossHpBar(float hp, float hpMax)
+    {
+        bossHpBar.value = hp / hpMax;
     }
     public void QuitGame()
     {

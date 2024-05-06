@@ -118,6 +118,9 @@ public class BossManagement : MonoBehaviour
         }
         
     }
-
+    public void SetBattleStage(int bs)
+    {
+        battleStage = bs;
+    }
 
 }

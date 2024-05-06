@@ -11,6 +11,7 @@ public class ES101 : MonoBehaviour
     public int spawnNumber = 5;
     public float rngX = 0.0f;
     public float rngZ = 0.0f;
+    public bool isBoss = false;
     
 
     // Start is called before the first frame update
@@ -33,6 +34,10 @@ public class ES101 : MonoBehaviour
             Instantiate(enemy, transform.position + new Vector3(Random.Range(-rngX, rngX), 0, Random.Range(-rngZ, rngZ)), transform.rotation);
             spawnTimer = Time.time + spawnRate;
             spawnNumber--;
+            if (isBoss)
+            {
+                GameManager.instance.BossFight(true);
+            }
         }
     }
 }
