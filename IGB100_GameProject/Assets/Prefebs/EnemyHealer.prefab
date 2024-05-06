@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8635920343855749910}
   - component: {fileID: 2055186218430472026}
   - component: {fileID: 4638547699942016549}
-  - component: {fileID: 6315619919935043933}
+  - component: {fileID: -1673832702462757232}
   m_Layer: 0
-  m_Name: Enemy01
+  m_Name: EnemyHealer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,11 +72,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567c425796ced0147ac844b19ad3a775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  healthMax: 100
   hitDamage: 25
   killIntention: 10
   token: 1
   score: 100
+  isBoss: 0
   deathEffect: {fileID: 159918, guid: a0040bf7072bc2f4e82d887d50a9c5e2, type: 3}
 --- !u!195 &2055186218430472026
 NavMeshAgent:
@@ -127,7 +128,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &6315619919935043933
+--- !u!114 &-1673832702462757232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,9 +137,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2473721945369546963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 545eb3f9f893bb5469879fa8c7c5eb9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f9f34e8f6701b459f6cb2d40b26bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitingTime: 1
+  heal: 30
+  healRate: 1
+  healRange: 100
+  healRound: 100
+  healingAnimationCD: 1
 --- !u!1 &6435441333116508402
 GameObject:
   m_ObjectHideFlags: 0

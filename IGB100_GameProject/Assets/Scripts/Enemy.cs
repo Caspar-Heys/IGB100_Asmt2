@@ -60,7 +60,18 @@ public class Enemy : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
-
+    public void AddHp(float add)
+    {
+        health += add;
+        if(health > healthMax)
+        {
+            health = healthMax;
+        }
+        if (isBoss)
+        {
+            GameManager.instance.UpdateBossHpBar(health, healthMax);
+        }
+    }
     private void OnTriggerStay(Collider otherObject) {
 
         if (otherObject.transform.tag == "Player" && Time.time > damageTimer) {
