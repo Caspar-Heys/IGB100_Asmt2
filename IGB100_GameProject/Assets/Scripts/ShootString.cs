@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootBulletRed : MonoBehaviour
+public class ShootString : MonoBehaviour
 {
     public float waitingTime = 1.0f;
     private float spawnTime = 0.0f;
