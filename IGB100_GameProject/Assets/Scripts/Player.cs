@@ -45,8 +45,8 @@ public class Player : MonoBehaviour {
         uiController.GetComponent<UIController>().UpdateHpBar(health, maxHealth);
         
         if (health <= 0) {
-            GameManager.instance.GameOver();
             GameManager.instance.win = false;
+            GameManager.instance.GameOver();
         }
     }
 

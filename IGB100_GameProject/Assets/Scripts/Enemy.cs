@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour {
     public int token = 1;
     public int score = 100;
 
+    public bool isBoss = false;
+
     //Effects
     public GameObject deathEffect;
 
@@ -35,6 +37,12 @@ public class Enemy : MonoBehaviour {
         health -= dmg;
         Debug.Log("hit");
         if (health <= 0) {
+            if (isBoss)
+            {
+                GameManager.instance.win = true;
+                GameManager.instance.GameOver();
+                
+            }
             Instantiate(deathEffect, transform.position, transform.rotation);
             GameManager.instance.token += token;
             GameManager.instance.score += score;
