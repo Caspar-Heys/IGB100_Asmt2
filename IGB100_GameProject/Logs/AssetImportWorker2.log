@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/release' branch; Version is '2022.3.20f1 (61c2feb0970d) revision 6406910'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16253 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 15712 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe
 -name
 AssetImportWorker2
 -projectPath
-D:/gbrya/gbryar/GitHub/IGB100_Asmt2/IGB100_GameProject
+C:/My/100/IGB100_Asmt2/IGB100_GameProject
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-63664
-Successfully changed project path to: D:/gbrya/gbryar/GitHub/IGB100_Asmt2/IGB100_GameProject
-D:/gbrya/gbryar/GitHub/IGB100_Asmt2/IGB100_GameProject
+53389
+Successfully changed project path to: C:/My/100/IGB100_Asmt2/IGB100_GameProject
+C:/My/100/IGB100_Asmt2/IGB100_GameProject
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,67 +49,65 @@ D:/gbrya/gbryar/GitHub/IGB100_Asmt2/IGB100_GameProject
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [33096] Host "[IP] 192.168.0.89 [Port] 0 [Flags] 2 [Guid] 2458705713 [EditorId] 2458705713 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-52C0Q5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [26524] Host "[IP] 172.30.80.1 [Port] 0 [Flags] 2 [Guid] 2504929603 [EditorId] 2504929603 [Version] 1048832 [Id] WindowsEditor(7,Meow) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [33096] Host "[IP] 192.168.0.89 [Port] 0 [Flags] 2 [Guid] 2458705713 [EditorId] 2458705713 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-52C0Q5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [26524] Host "[IP] 172.30.80.1 [Port] 0 [Flags] 2 [Guid] 2504929603 [EditorId] 2504929603 [Version] 1048832 [Id] WindowsEditor(7,Meow) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 8.10 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 9.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.20f1 (61c2feb0970d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/gbrya/gbryar/GitHub/IGB100_Asmt2/IGB100_GameProject/Assets
+[Subsystems] Discovering subsystems at path C:/My/100/IGB100_Asmt2/IGB100_GameProject/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
-    Vendor:   NVIDIA
-    VRAM:     12129 MB
-    Driver:   31.0.15.3713
+    Renderer: AMD Radeon (TM) Graphics (ID=0x15e7)
+    Vendor:   ATI
+    VRAM:     7856 MB
+    Driver:   31.0.12044.3
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56676
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56784
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006604 seconds.
-- Loaded All Assemblies, in  0.321 seconds
+Registered in 0.006153 seconds.
+- Loaded All Assemblies, in  0.438 seconds
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.231 seconds
-Domain Reload Profiling: 551ms
-	BeginReloadAssembly (86ms)
+- Finished resetting the current domain, in  0.282 seconds
+Domain Reload Profiling: 718ms
+	BeginReloadAssembly (158ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (28ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (142ms)
-		LoadAssemblies (84ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (164ms)
+		LoadAssemblies (156ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (140ms)
-			TypeCache.Refresh (139ms)
-				TypeCache.ScanAssembly (124ms)
+		AnalyzeDomain (161ms)
+			TypeCache.Refresh (160ms)
+				TypeCache.ScanAssembly (145ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (232ms)
+	FinalizeReload (283ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (185ms)
+		SetupLoadedEditorAssemblies (225ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (125ms)
-			ProcessInitializeOnLoadMethodAttributes (41ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (152ms)
+			ProcessInitializeOnLoadMethodAttributes (54ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -117,56 +115,55 @@ Domain Reload Profiling: 551ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.521 seconds
-Refreshing native plugins compatible for Editor in 1.49 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.634 seconds
+Refreshing native plugins compatible for Editor in 2.72 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.438 seconds
-Domain Reload Profiling: 957ms
-	BeginReloadAssembly (124ms)
+- Finished resetting the current domain, in  0.609 seconds
+Domain Reload Profiling: 1241ms
+	BeginReloadAssembly (155ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (18ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (322ms)
-		LoadAssemblies (240ms)
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (395ms)
+		LoadAssemblies (323ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (153ms)
-			TypeCache.Refresh (125ms)
-				TypeCache.ScanAssembly (113ms)
-			ScanForSourceGeneratedMonoScriptInfo (17ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (438ms)
+		AnalyzeDomain (164ms)
+			TypeCache.Refresh (144ms)
+				TypeCache.ScanAssembly (130ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (610ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (323ms)
+		SetupLoadedEditorAssemblies (455ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (2ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (44ms)
-			ProcessInitializeOnLoadAttributes (249ms)
-			ProcessInitializeOnLoadMethodAttributes (15ms)
-			AfterProcessingInitializeOnLoad (7ms)
+			BeforeProcessingInitializeOnLoad (64ms)
+			ProcessInitializeOnLoadAttributes (353ms)
+			ProcessInitializeOnLoadMethodAttributes (22ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 2.53 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 4.63 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3200 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (58.7 KB). Loaded Objects now: 3684.
-Memory consumption went from 143.3 MB to 143.2 MB.
-Total: 3.521200 ms (FindLiveObjects: 0.253800 ms CreateObjectMapping: 0.144400 ms MarkObjects: 2.923100 ms  DeleteObjects: 0.198800 ms)
+Unloading 32 unused Assets / (59.0 KB). Loaded Objects now: 3684.
+Memory consumption went from 143.2 MB to 143.2 MB.
+Total: 3.802600 ms (FindLiveObjects: 0.285600 ms CreateObjectMapping: 0.210800 ms MarkObjects: 3.139300 ms  DeleteObjects: 0.165400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -183,63 +180,510 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 769059.210238 seconds.
-  path: Assets/Models/Characters/Enemy_Run_standardSurface1_Height.png
-  artifactKey: Guid(e372f8840627f0b42aadedfde61fc2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/Enemy_Run_standardSurface1_Height.png using Guid(e372f8840627f0b42aadedfde61fc2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a79328124c3a7119939b47ca9f4526b') in 1.964342 seconds
+  Time since last request: 325919.203502 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket01.fbx
+  artifactKey: Guid(dd38f665ad77be340856868cb8cecb1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket01.fbx using Guid(dd38f665ad77be340856868cb8cecb1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ffa28f60346f560a70c3e7f7b55e95c') in 0.138014 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 1.575261 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket01_Pink.prefab
+  artifactKey: Guid(12ee52a76fba3aa41a576a1af81caf54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket01_Pink.prefab using Guid(12ee52a76fba3aa41a576a1af81caf54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57ce21c09697b9739b824577a1464523') in 0.009811 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket02_Blue.prefab
+  artifactKey: Guid(5819d1d772c12d54d98fe5b1931dd6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket02_Blue.prefab using Guid(5819d1d772c12d54d98fe5b1931dd6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdaefdaecd7300eabb741d52bc72834a') in 0.009373 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.083194 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket02_Green.prefab
+  artifactKey: Guid(f0ca629f873625b4f9e001804bb478be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket02_Green.prefab using Guid(f0ca629f873625b4f9e001804bb478be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a19bdb4c6becd84f37d8d638d51277d1') in 0.008452 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket02_Red.prefab
+  artifactKey: Guid(b1ad7ae1ebd75ab41940c2536223f66e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket02_Red.prefab using Guid(b1ad7ae1ebd75ab41940c2536223f66e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3b7ba03fad5bd6ab43c7a2db9e2ff98') in 0.009426 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.492476 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket02_Yellow.prefab
+  artifactKey: Guid(6cbf0ce76b5f16249adbf6d3d6590d1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket02_Yellow.prefab using Guid(6cbf0ce76b5f16249adbf6d3d6590d1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adde46628aa0dd544caac5178f9b0800') in 0.009572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket03_Grey.prefab
+  artifactKey: Guid(44e4bc9b92cc5d94bae579cb51efda9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket03_Grey.prefab using Guid(44e4bc9b92cc5d94bae579cb51efda9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32894444010b0987bce7cacfe849f470') in 0.010651 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.560298 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Orange/Rocket03_Orange.prefab
+  artifactKey: Guid(2b209b40695a78647b516bfc30d23432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Orange/Rocket03_Orange.prefab using Guid(2b209b40695a78647b516bfc30d23432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b10e351eb48f9d7af1b332c3c27b8542') in 0.009390 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket03_Yellow.prefab
+  artifactKey: Guid(7322cddb1b496e94a9b5aa53b65dff7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket03_Yellow.prefab using Guid(7322cddb1b496e94a9b5aa53b65dff7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26097fec85ecdd32f7851d716e9b80b7') in 0.008388 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.071181 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket04_Blue.prefab
+  artifactKey: Guid(b934460fd29c83441a9560d469856505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket04_Blue.prefab using Guid(b934460fd29c83441a9560d469856505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1ff42a2b38c07fba65b8ea47b274baa') in 0.009292 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket04_Pink.prefab
+  artifactKey: Guid(cac21da872420e648908fa02ae4e9270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket04_Pink.prefab using Guid(cac21da872420e648908fa02ae4e9270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfe493c2ed909809e86eafebd84cf271') in 0.010438 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.383391 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket04_Red.prefab
+  artifactKey: Guid(c8788abf7763abf4f869276b4cb7bb0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket04_Red.prefab using Guid(c8788abf7763abf4f869276b4cb7bb0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f153ea1c01261a42b194d31fb48e7f6c') in 0.009815 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket05_Blue.prefab
+  artifactKey: Guid(80581b11eb41ebc4d9eddc774d110551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket05_Blue.prefab using Guid(80581b11eb41ebc4d9eddc774d110551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '619d1245bed9d62590284c537a5ee682') in 0.008314 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.035985 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket05_Grey.prefab
+  artifactKey: Guid(9132b6edd9178b943986a049d9e3c590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket05_Grey.prefab using Guid(9132b6edd9178b943986a049d9e3c590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9857cb7e5e0be8d7b2272fb8ccd6370d') in 0.009582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket05_Yellow.prefab
+  artifactKey: Guid(2e9afbbf945244a48843b05a8094d29f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket05_Yellow.prefab using Guid(2e9afbbf945244a48843b05a8094d29f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad0237429e3ade60c16d31049b382804') in 0.009528 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.274716 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket06.fbx
+  artifactKey: Guid(0094b425812d49548913a84e817fac7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket06.fbx using Guid(0094b425812d49548913a84e817fac7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '754428c15f5851f8cb13009f1c45aa26') in 0.014293 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Orange/Rocket06_Orange.prefab
+  artifactKey: Guid(b65939835b3280248b7b52fd8e7ba238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Orange/Rocket06_Orange.prefab using Guid(b65939835b3280248b7b52fd8e7ba238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0442d855ec72480b9de9e1d22ff5e578') in 0.007366 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.039635 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket06_Pink.prefab
+  artifactKey: Guid(8a567ee3eb574f4458a3f69549ba544c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket06_Pink.prefab using Guid(8a567ee3eb574f4458a3f69549ba544c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edd25b0909008ffa64abd20029fde0f4') in 0.008014 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.033886 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket07.fbx
+  artifactKey: Guid(84a51c006a270a441a3abc0526b64060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket07.fbx using Guid(84a51c006a270a441a3abc0526b64060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfbb2e86625ce7620372c729e78df5c1') in 0.025822 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Orange/Rocket07_Orange.prefab
+  artifactKey: Guid(ed6d2e6fcd6a48243ae89b475a6fbf4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Orange/Rocket07_Orange.prefab using Guid(ed6d2e6fcd6a48243ae89b475a6fbf4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71600ec7a8ebf33e011010b4877cd979') in 0.008114 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.197029 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket07_Yellow.prefab
+  artifactKey: Guid(d8c23dd44f6189143a7ace47500afb1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket07_Yellow.prefab using Guid(d8c23dd44f6189143a7ace47500afb1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f2798eca9e6fd7d32db2676e8f75867') in 0.008577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket08_Green.prefab
+  artifactKey: Guid(40c81198a16809148bc94558b865ecac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket08_Green.prefab using Guid(40c81198a16809148bc94558b865ecac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4717d67f90fcd3dae96ed6f3574ed98') in 0.009029 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.039606 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Orange/Rocket08_Orange.prefab
+  artifactKey: Guid(a57adc57eaed14f478159babdb06ce01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Orange/Rocket08_Orange.prefab using Guid(a57adc57eaed14f478159babdb06ce01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4731890cee13c83fcf60fc1dc16cd542') in 0.007751 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.029981 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket09_Green.prefab
+  artifactKey: Guid(0c8cf5f4899b6704a916c21118bfd186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket09_Green.prefab using Guid(0c8cf5f4899b6704a916c21118bfd186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fe93a85b090a435439a29dbc0256866') in 0.018536 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket09.fbx
+  artifactKey: Guid(d705a6b4d5784b04fa56134079f39e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket09.fbx using Guid(d705a6b4d5784b04fa56134079f39e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '148ef28a7772e523d8da9d93613f2b84') in 0.021004 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.164942 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket09_Red.prefab
+  artifactKey: Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket09_Red.prefab using Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9faaea44fff99f2ee366482dcf6c898') in 0.017060 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket10_Blue.prefab
+  artifactKey: Guid(4461ab2f7c9b5894abb2247f890cd36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket10_Blue.prefab using Guid(4461ab2f7c9b5894abb2247f890cd36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd82156b959da02015b820d09d7318a99') in 0.012697 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.060607 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket10_Grey.prefab
+  artifactKey: Guid(54c76dcf0d752004ca745b02c8c1a75d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket10_Grey.prefab using Guid(54c76dcf0d752004ca745b02c8c1a75d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '202765c26eba3aa6873da7f8a8cc3773') in 0.008942 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket10_Red.prefab
+  artifactKey: Guid(57369ee17caa1a2499b2aaa832a1134d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket10_Red.prefab using Guid(57369ee17caa1a2499b2aaa832a1134d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '972be61f7ede774474ea8be1e8aa40be') in 0.025913 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket11_Blue.prefab
+  artifactKey: Guid(2f448f2daa573b94ebfc6a28951422ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket11_Blue.prefab using Guid(2f448f2daa573b94ebfc6a28951422ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83a2a4d916fc27f5695d88a1e4a8374a') in 0.014197 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 1.093924 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket11_Pink.prefab
+  artifactKey: Guid(deab0bb3d06b0794cb2457a518aba6fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket11_Pink.prefab using Guid(deab0bb3d06b0794cb2457a518aba6fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '883efd4a2fe584e92f10d3fa6fd8e516') in 0.010055 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket12.fbx
+  artifactKey: Guid(2cc0d580e1f45a54fbcde2699abadfbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket12.fbx using Guid(2cc0d580e1f45a54fbcde2699abadfbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c031ffda7d3b782487418765be96688') in 0.034070 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.047244 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket12_Green.prefab
+  artifactKey: Guid(1b70bcb7b0c23404f8a7d68b0211f947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket12_Green.prefab using Guid(1b70bcb7b0c23404f8a7d68b0211f947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284126b1c90a4a07758109605829d6c8') in 0.015090 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket13.fbx
+  artifactKey: Guid(aaf66b32fc1a1274dac9428916a9f512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket13.fbx using Guid(aaf66b32fc1a1274dac9428916a9f512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44de5da5bf587f3667e9300c7378be89') in 0.033360 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket12_Yellow.prefab
+  artifactKey: Guid(0a4e3ee3c4c99bf41942f0140f878a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket12_Yellow.prefab using Guid(0a4e3ee3c4c99bf41942f0140f878a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba6ba41f5011a1ca9fca606a41b5826e') in 0.010387 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.151130 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Orange/Rocket13_Orange.prefab
+  artifactKey: Guid(94afc8ab8b2d67c4992c20ccacf9cc2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Orange/Rocket13_Orange.prefab using Guid(94afc8ab8b2d67c4992c20ccacf9cc2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd958852ab566b0d9dc7ac81b0c116144') in 0.015532 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket13_Yellow.prefab
+  artifactKey: Guid(047c4edb7b0e3ee4aa6708a4a0622e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket13_Yellow.prefab using Guid(047c4edb7b0e3ee4aa6708a4a0622e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd708b879ddd11a28608a07f14923e479') in 0.019641 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.025735 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket14_Blue.prefab
+  artifactKey: Guid(32d6e58891d58824f824f55212366ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket14_Blue.prefab using Guid(32d6e58891d58824f824f55212366ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea7eb8ade5adc02cc978d574dfe21fb9') in 0.012428 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket14_Pink.prefab
+  artifactKey: Guid(3abc4a41db905ca4799691d94d6d5523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket14_Pink.prefab using Guid(3abc4a41db905ca4799691d94d6d5523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15d342dfa4eb2fa1b62565271a29a18e') in 0.016583 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.014842 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket14_Red.prefab
+  artifactKey: Guid(7df9bafe504b33b4b96c2d9c75ce8d26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket14_Red.prefab using Guid(7df9bafe504b33b4b96c2d9c75ce8d26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f46f7b007983a0f5a8b50e207c2e66b') in 0.011511 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket15_Green.prefab
+  artifactKey: Guid(e218ad93e535e944d8098194db44ce81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket15_Green.prefab using Guid(e218ad93e535e944d8098194db44ce81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ffec1754f3de01d300a0cfcc9c9eaae') in 0.023300 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.141067 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket15_Grey.prefab
+  artifactKey: Guid(e7ea29554e0ecca4991c27160bb10eab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket15_Grey.prefab using Guid(e7ea29554e0ecca4991c27160bb10eab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b811af7f88ea92cb48432c6013ba18d2') in 0.020065 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.063068 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket16.fbx
+  artifactKey: Guid(5fd96a7c4093fe34584ee81d09520bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket16.fbx using Guid(5fd96a7c4093fe34584ee81d09520bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddd0599e2251bbe07f2f68fffe517a58') in 0.043243 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket17_Grey.prefab
+  artifactKey: Guid(a809b1bbe3d22544e9a919f0eda241aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket17_Grey.prefab using Guid(a809b1bbe3d22544e9a919f0eda241aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93d385e8fd137e706c0f6ac1b9b5e171') in 0.012347 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket16_Red.prefab
+  artifactKey: Guid(720bd4b72fb311c468bfbf618f17263f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket16_Red.prefab using Guid(720bd4b72fb311c468bfbf618f17263f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2583af81c8b70382fbbd6542283506b5') in 0.015027 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket17_Pink.prefab
+  artifactKey: Guid(ac7fb45d9269d7b4eb88ab4720cc4639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket17_Pink.prefab using Guid(ac7fb45d9269d7b4eb88ab4720cc4639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91cbc5d5b199c58ce1e02d9d255e3740') in 0.015249 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.156504 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket17_Yellow.prefab
+  artifactKey: Guid(f22d592187d995947a1a65385ce129f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Yellow/Rocket17_Yellow.prefab using Guid(f22d592187d995947a1a65385ce129f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a27c04ac12427495213ffeed7d23fb29') in 0.011359 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket18_Green.prefab
+  artifactKey: Guid(b809d6d16d69d0340bb458654f7f2973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket18_Green.prefab using Guid(b809d6d16d69d0340bb458654f7f2973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c58e4c8b928cae1274551d4b486f0d1') in 0.014444 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket18_Pink.prefab
+  artifactKey: Guid(971f59115a4c9db4788065cdaea9677c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Pink/Rocket18_Pink.prefab using Guid(971f59115a4c9db4788065cdaea9677c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f22bcff1cf1efe373005fd09a381622') in 0.020161 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket18_Red.prefab
+  artifactKey: Guid(ba82ee92e1ad49a49a80b733d3386209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket18_Red.prefab using Guid(ba82ee92e1ad49a49a80b733d3386209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39c0a7c52d39a75defd63b7a323fe096') in 0.011843 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.036332 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket19_Blue.prefab
+  artifactKey: Guid(7498719881dd35b4c8c2af3f51d30ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue/Rocket19_Blue.prefab using Guid(7498719881dd35b4c8c2af3f51d30ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cfdf811e8ae249c65f715d34c971ccd') in 0.033015 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.204644 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket19_Red.prefab
+  artifactKey: Guid(24baf2ca3b369a64b999258f8731be6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket19_Red.prefab using Guid(24baf2ca3b369a64b999258f8731be6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90d457bde2cc80218f7c190cc4d1ce32') in 0.010235 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket20_Green.prefab
+  artifactKey: Guid(4d2d440b288a61342852b3f119e85da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Green/Rocket20_Green.prefab using Guid(4d2d440b288a61342852b3f119e85da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '098c7195a872427f774d6c86487c2f34') in 0.012659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket20_Grey.prefab
+  artifactKey: Guid(2dc0e72f48efa094996be8621ad92a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Grey/Rocket20_Grey.prefab using Guid(2dc0e72f48efa094996be8621ad92a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f2cba8d1b65a0282b37de09488cf081') in 0.017594 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket20_Red.prefab
+  artifactKey: Guid(6a3a8a8cf48e3724caddfc3a5720216c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Red/Rocket20_Red.prefab using Guid(6a3a8a8cf48e3724caddfc3a5720216c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06a8d43b81e2084ed4aebdad9e0ac720') in 0.009927 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.042375 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket21.fbx
+  artifactKey: Guid(377c635e6ac08e6419ccdc298b66e44b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Models/Rocket21.fbx using Guid(377c635e6ac08e6419ccdc298b66e44b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '780a4e62b4d9fe379dc379e786b39263') in 0.044275 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 261.650982 seconds.
+  path: Assets/Prefebs/Enemy_Ranged.prefab
+  artifactKey: Guid(5320ba136369b5b46a70fb05f874cb9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Enemy_Ranged.prefab using Guid(5320ba136369b5b46a70fb05f874cb9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9e54c5b715e4949d2b671ebf9ebfd27') in 0.058232 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 336
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.896 seconds
-Refreshing native plugins compatible for Editor in 1.72 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.416 seconds
+Refreshing native plugins compatible for Editor in 2.86 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in 10.425 seconds
-Domain Reload Profiling: 11319ms
-	BeginReloadAssembly (315ms)
+- Finished resetting the current domain, in  1.008 seconds
+Domain Reload Profiling: 1423ms
+	BeginReloadAssembly (135ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (78ms)
-	RebuildCommonClasses (28ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (33ms)
 	RebuildNativeTypeToScriptingClass (9ms)
 	initialDomainReloadingComplete (27ms)
-	LoadAllAssembliesAndSetupDomain (515ms)
-		LoadAssemblies (666ms)
+	LoadAllAssembliesAndSetupDomain (210ms)
+		LoadAssemblies (269ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (22ms)
+		AnalyzeDomain (11ms)
 			TypeCache.Refresh (5ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (10426ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1009ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (299ms)
+		SetupLoadedEditorAssemblies (458ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (49ms)
-			ProcessInitializeOnLoadAttributes (218ms)
-			ProcessInitializeOnLoadMethodAttributes (15ms)
+			BeforeProcessingInitializeOnLoad (72ms)
+			ProcessInitializeOnLoadAttributes (337ms)
+			ProcessInitializeOnLoadMethodAttributes (27ms)
 			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Refreshing native plugins compatible for Editor in 13.89 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 4.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3179 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3690.
-Memory consumption went from 141.0 MB to 140.9 MB.
-Total: 3.820700 ms (FindLiveObjects: 0.193300 ms CreateObjectMapping: 0.093000 ms MarkObjects: 3.485000 ms  DeleteObjects: 0.048500 ms)
+Unloading 22 unused Assets / (30.2 KB). Loaded Objects now: 3734.
+Memory consumption went from 147.4 MB to 147.4 MB.
+Total: 4.860600 ms (FindLiveObjects: 0.423300 ms CreateObjectMapping: 0.397500 ms MarkObjects: 3.932900 ms  DeleteObjects: 0.105500 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -255,11 +699,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 105.042292 seconds.
-  path: Assets/Models/Characters/EnemyMaterial.mat
-  artifactKey: Guid(0b5a02b7b03a2194fbb547005ba425ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Characters/EnemyMaterial.mat using Guid(0b5a02b7b03a2194fbb547005ba425ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e8232118bd61e457d8ca8436f6059c2') in 0.149202 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
