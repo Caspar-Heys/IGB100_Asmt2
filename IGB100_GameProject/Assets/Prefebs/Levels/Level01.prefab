@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 3233150227448364714, guid: ce95ac19bc4ede641b263f8341bd0efd, type: 3}
-  waitingTime: 5
+  waitingTime: 20
   spawnRate: 5
   spawnNumber: 1
   rngX: 0
@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2905702306493850662, guid: 5320ba136369b5b46a70fb05f874cb9e, type: 3}
-  waitingTime: 2
-  spawnRate: 5
-  spawnNumber: 1
+  waitingTime: 8
+  spawnRate: 2
+  spawnNumber: 5
   rngX: 0
   rngZ: 0
   isBoss: 0
@@ -182,9 +182,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2473721945369546963, guid: ca0f65617576565478f3da54ab883cde, type: 3}
-  waitingTime: 5
-  spawnRate: 5
-  spawnNumber: 1
+  waitingTime: 10
+  spawnRate: 10
+  spawnNumber: 2
   rngX: 0
   rngZ: 0
   isBoss: 0
@@ -234,8 +234,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 4592762257819642038, guid: 92783088b403a28468d38836fdfacdcc, type: 3}
   waitingTime: 0
-  spawnRate: 2
-  spawnNumber: 1
+  spawnRate: 1
+  spawnNumber: 5
   rngX: 0
   rngZ: 0
   isBoss: 0
