@@ -20,23 +20,35 @@ public class Enemy : MonoBehaviour {
 
     public bool isBoss = false;
 
+    private float hurtFlashingTimer = 0.0f;
+    private float hurtFlashingRate = 0.05f;
+    private float flashDuration = 0.0f;
+    private float flashDurationMax = 0.2f;
+    private bool bright = true;
+    public SkinnedMeshRenderer thisRenderer;
+    private Color currentColour;
+    private Color emmisionColour;
+
     //Effects
     public GameObject deathEffect;
 
 	// Use this for initialization
 	void Start () {
         health = healthMax;
+        currentColour = thisRenderer.material.GetColor("_EmissionColor");
+        emmisionColour = new Color(1.0f, 0.0f, 0.0f);
     }
 	
 	// Update is called once per frame
 	void Update () {
-       
-	}
+        Flashing();
+    }
 
     //Public method for taking damage and dying
     public void TakeDamage(float dmg) {
         health -= dmg;
-        Debug.Log("hit");
+        //Debug.Log("hit");
+        AddFlashDuration();
         if (isBoss )
         {
             GameManager.instance.UpdateBossHpBar(health, healthMax);
@@ -87,5 +99,41 @@ public class Enemy : MonoBehaviour {
     public bool GetFiring()
     {
         return firing;
+    }
+
+    private void Flashing()
+    {
+        if (flashDuration > 0)
+        {
+            if (Time.time - hurtFlashingTimer > hurtFlashingRate)
+            {
+                //Debug.Log("bright = " + bright);
+                if (bright)
+                {
+                    thisRenderer.material.SetColor("_EmissionColor", emmisionColour);
+                    thisRenderer.material.EnableKeyword("_EMISSION");
+                    
+                }
+                else
+                {
+                    thisRenderer.material.SetColor("_EmissionColor", currentColour);
+           
+                }
+                bright = !bright;
+                hurtFlashingTimer = Time.time;
+            }
+            flashDuration -= Time.deltaTime;
+            if (flashDuration < 0)
+            {
+                thisRenderer.material.SetColor("_EmissionColor", currentColour);
+                
+                flashDuration = 0;
+            }
+        }
+    }
+
+    private void AddFlashDuration()
+    {
+        flashDuration = flashDurationMax;
     }
 }
