@@ -112,12 +112,10 @@ public class Enemy : MonoBehaviour {
                 {
                     thisRenderer.material.SetColor("_EmissionColor", emmisionColour);
                     thisRenderer.material.EnableKeyword("_EMISSION");
-                    
                 }
                 else
                 {
                     thisRenderer.material.SetColor("_EmissionColor", currentColour);
-           
                 }
                 bright = !bright;
                 hurtFlashingTimer = Time.time;
@@ -126,7 +124,6 @@ public class Enemy : MonoBehaviour {
             if (flashDuration < 0)
             {
                 thisRenderer.material.SetColor("_EmissionColor", currentColour);
-                
                 flashDuration = 0;
             }
         }
