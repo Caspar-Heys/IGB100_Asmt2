@@ -194,6 +194,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 59771340125088919}
   m_SourcePrefab: {fileID: 100100000, guid: 7dfdcc4fb9233ad47a1668ab70572974, type: 3}
+--- !u!137 &2470274774248324037 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -8729554039748320590, guid: 7dfdcc4fb9233ad47a1668ab70572974, type: 3}
+  m_PrefabInstance: {fileID: 2635249046470809975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2529035583908036252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7dfdcc4fb9233ad47a1668ab70572974, type: 3}
@@ -288,6 +293,7 @@ MonoBehaviour:
   token: 1
   score: 100
   isBoss: 0
+  thisRenderer: {fileID: 2470274774248324037}
   deathEffect: {fileID: 159918, guid: a0040bf7072bc2f4e82d887d50a9c5e2, type: 3}
 --- !u!54 &408051312485861853
 Rigidbody:

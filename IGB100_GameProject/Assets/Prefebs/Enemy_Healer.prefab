@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3710312026462229991
+--- !u!1001 &5145646524783791047
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.2919064
@@ -50,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       propertyPath: m_Name
-      value: Enemy_Melee
+      value: Enemy_Healer
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       propertyPath: m_TagString
@@ -63,40 +75,40 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8745059666278588688}
+      addedObject: {fileID: 7074032646628306472}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3996823327323131925}
+      addedObject: {fileID: 8058668719450139863}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4853786765055237378}
+      addedObject: {fileID: 8347198152195255938}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2444745942119567595}
+      addedObject: {fileID: 2722979350432178480}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7280125618706339331}
+      addedObject: {fileID: 1983074418565736289}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2664401200889060738}
+      addedObject: {fileID: 4221733131125851080}
   m_SourcePrefab: {fileID: 100100000, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
---- !u!137 &3866280886506731349 stripped
+--- !u!137 &4734240446993115509 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -8729554039748320590, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
-  m_PrefabInstance: {fileID: 3710312026462229991}
+  m_PrefabInstance: {fileID: 5145646524783791047}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4592762257819642038 stripped
+--- !u!1 &5451725621685859990 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
-  m_PrefabInstance: {fileID: 3710312026462229991}
+  m_PrefabInstance: {fileID: 5145646524783791047}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &8745059666278588688
+--- !u!136 &7074032646628306472
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4592762257819642038}
+  m_GameObject: {fileID: 5451725621685859990}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -113,14 +125,14 @@ CapsuleCollider:
   m_Height: 2.3185122
   m_Direction: 1
   m_Center: {x: 0, y: 0.6592561, z: 0.009132862}
---- !u!95 &3996823327323131925
+--- !u!95 &8058668719450139863
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4592762257819642038}
+  m_GameObject: {fileID: 5451725621685859990}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7770a2d16292fa44ebf9cf8b697f4386, type: 2}
@@ -134,13 +146,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!195 &4853786765055237378
+--- !u!195 &8347198152195255938
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4592762257819642038}
+  m_GameObject: {fileID: 5451725621685859990}
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
@@ -156,13 +168,13 @@ NavMeshAgent:
   m_BaseOffset: 0.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!54 &2444745942119567595
+--- !u!54 &2722979350432178480
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4592762257819642038}
+  m_GameObject: {fileID: 5451725621685859990}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -183,35 +195,41 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &7280125618706339331
+--- !u!114 &1983074418565736289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4592762257819642038}
+  m_GameObject: {fileID: 5451725621685859990}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 567c425796ced0147ac844b19ad3a775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthMax: 100
-  hitDamage: 25
+  hitDamage: 10
   killIntention: 10
   token: 1
   score: 100
   isBoss: 0
-  thisRenderer: {fileID: 3866280886506731349}
+  thisRenderer: {fileID: 4734240446993115509}
   deathEffect: {fileID: 159918, guid: a0040bf7072bc2f4e82d887d50a9c5e2, type: 3}
---- !u!114 &2664401200889060738
+--- !u!114 &4221733131125851080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4592762257819642038}
+  m_GameObject: {fileID: 5451725621685859990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 545eb3f9f893bb5469879fa8c7c5eb9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f9f34e8f6701b459f6cb2d40b26bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitingTime: 1
+  heal: 30
+  healRate: 1
+  healRange: 100
+  healRound: 100
+  healingAnimationCD: 1

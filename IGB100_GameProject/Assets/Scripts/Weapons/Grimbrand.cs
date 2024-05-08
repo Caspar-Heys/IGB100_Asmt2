@@ -43,7 +43,7 @@ public class Grimbrand : MonoBehaviour
 
     private void WeaponFiring()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > fireTimer) 
+        if (Input.GetMouseButtonDown(0) && Time.time > fireTimer && !reloading) 
         {
             if (magazine > 0) // fire
             {

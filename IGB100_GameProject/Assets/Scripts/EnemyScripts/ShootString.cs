@@ -9,7 +9,7 @@ public class ShootString : MonoBehaviour
 
     public int fireRound = 10;
     public float fireRate = 3.0f;
-    private float fireTime = 0.0f;
+    private float fireTimer = 0.0f;
     public float bulletSpeed = 10.0f;
     
     // string of bullets
@@ -42,18 +42,19 @@ public class ShootString : MonoBehaviour
 
     private void Shoot()
     {
-        if (Time.time > fireTime)
+        if (Time.time > fireTimer)
         {
             firingAnimationTimer = Time.time;
             firing = true;
             GetComponent<Enemy>().SetFiring(true);
             transform.LookAt(player.transform.position);
+            muzzle.transform.LookAt(player.transform.position);
             for (int i = 0; i < fireString; i++)
             {
                 GameObject enemyBullet = Instantiate(enemybullet, muzzle.transform.position, muzzle.transform.rotation);
                 enemyBullet.GetComponent<EnemyBulletRed>().SetSpeed(bulletSpeed - i * bulletSpeedDown);
             }
-            fireTime = Time.time + fireRate;
+            fireTimer = Time.time + fireRate;
             fireRound--;
             
         }

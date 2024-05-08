@@ -55,22 +55,19 @@ public class BossManagement : MonoBehaviour
     {  
         if (firing)
         {
-            ShootSpread();
+            ShootSpreadly();
             if (shootSpreadRound == 0)
             {
                 firing = false;
                 GetComponent<Enemy>().SetFiring(false);
                 locked = false;
                 agent.speed = speed;
-            }
-            
+            }          
         }
         else
         {
             Movement();
-        }
-        
-        
+        }  
     }
 
     private void Movement()
@@ -123,7 +120,7 @@ public class BossManagement : MonoBehaviour
         }
         
     }
-    public void ShootSpread()
+    public void ShootSpreadly()
     {
         transform.LookAt(player.transform.position);
         rotation = transform.rotation;
@@ -147,6 +144,8 @@ public class BossManagement : MonoBehaviour
                 {
                     subNumber = shootSpreadNumber + 1;
                 }
+                muzzle.transform.LookAt(player.transform.position);
+                rotation = muzzle.transform.rotation;
                 for (int j = 0; j < subNumber; j++)
                 {
                     GameObject enemyBullet = Instantiate(bossBullet, muzzle.transform.position, rotation * Quaternion.Euler(0f, shootSpreadAngle * (-subNumber + 1 + j * 2), 0f));
