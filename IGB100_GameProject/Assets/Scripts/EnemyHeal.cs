@@ -31,8 +31,7 @@ public class EnemyHeal : MonoBehaviour
         if (Time.time - spawnTime > waitingTime && healRound > 0)
         {
             Heal();
-        }
-        
+        } 
     }
 
     private void Heal()
@@ -59,6 +58,5 @@ public class EnemyHeal : MonoBehaviour
             GetComponent<Enemy>().SetFiring(false);
             healing = false;
         }
-
     }
 }

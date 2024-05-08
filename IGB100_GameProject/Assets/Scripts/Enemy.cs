@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour {
     private bool bright = true;
     public SkinnedMeshRenderer thisRenderer;
     private Color currentColour;
-    private Color emmisionColour;
+    private Color emissionColour;
 
     //Effects
     public GameObject deathEffect;
@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour {
 	void Start () {
         health = healthMax;
         currentColour = thisRenderer.material.GetColor("_EmissionColor");
-        emmisionColour = new Color(1.0f, 0.0f, 0.0f);
+        emissionColour = new Color(1.0f, 0.0f, 0.0f);
     }
 	
 	// Update is called once per frame
@@ -110,7 +110,7 @@ public class Enemy : MonoBehaviour {
                 //Debug.Log("bright = " + bright);
                 if (bright)
                 {
-                    thisRenderer.material.SetColor("_EmissionColor", emmisionColour);
+                    thisRenderer.material.SetColor("_EmissionColor", emissionColour);
                     thisRenderer.material.EnableKeyword("_EMISSION");
                 }
                 else
