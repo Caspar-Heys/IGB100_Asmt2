@@ -48,6 +48,7 @@ public class ShootString : MonoBehaviour
             firing = true;
             GetComponent<Enemy>().SetFiring(true);
             transform.LookAt(player.transform.position);
+            muzzle.transform.LookAt(player.transform.position);
             for (int i = 0; i < fireString; i++)
             {
                 GameObject enemyBullet = Instantiate(enemybullet, muzzle.transform.position, muzzle.transform.rotation);

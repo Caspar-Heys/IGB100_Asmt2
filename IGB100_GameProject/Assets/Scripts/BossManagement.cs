@@ -144,6 +144,8 @@ public class BossManagement : MonoBehaviour
                 {
                     subNumber = shootSpreadNumber + 1;
                 }
+                muzzle.transform.LookAt(player.transform.position);
+                rotation = muzzle.transform.rotation;
                 for (int j = 0; j < subNumber; j++)
                 {
                     GameObject enemyBullet = Instantiate(bossBullet, muzzle.transform.position, rotation * Quaternion.Euler(0f, shootSpreadAngle * (-subNumber + 1 + j * 2), 0f));
