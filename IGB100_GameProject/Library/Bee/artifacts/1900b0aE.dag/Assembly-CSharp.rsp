@@ -364,6 +364,7 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/ItemAttributes.cs"
 "Assets/Scripts/KillObject.cs"
+"Assets/Scripts/LobbyManager.cs"
 "Assets/Scripts/MenuUIController.cs"
 "Assets/Scripts/MoveToPlayer.cs"
 "Assets/Scripts/MoveToWayPoints.cs"
