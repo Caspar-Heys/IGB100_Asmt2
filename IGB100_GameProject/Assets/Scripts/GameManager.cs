@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = false;
         Destroy(level01);
         player.SetActive(false);
+        player.SetActive(false);
         if (win)
         {
             uiController.GetComponent<UIController>().ShowWinUI();

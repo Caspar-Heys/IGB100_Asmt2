@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
 
     public GameObject InteractPrompt;
     public GameObject playerUI;
+    public GameObject ShopUI;
     public Slider healthBar;
     public Slider killIntentionBar;
     public Slider magazineBar;
@@ -39,10 +40,14 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerUI.activeInHierarchy && (Input.GetKey("p")|| Input.GetKey("escape")))
+        if (playerUI.activeInHierarchy && (Input.GetKeyDown("p")|| Input.GetKeyDown("escape")))
         {
             PauseGame();
             // show pause ui and cursor
+        }
+        else if(pauseUI.activeInHierarchy && (Input.GetKeyDown("p")|| Input.GetKeyDown("escape")))
+        {
+            UnPauseGame();
         }
         if (Time.time > fpsDisplayTimer)
         {
@@ -62,14 +67,15 @@ public class UIController : MonoBehaviour
     public void ShowPlayerUI()
     {
         playerUI.SetActive(true);
-        winUI.SetActive(false);
-        loseUI.SetActive(false);
+        //winUI.SetActive(false);
+        //loseUI.SetActive(false);
         pauseUI.SetActive(false);
     }
+
     public void PauseGame()
     {
         Time.timeScale = 0.0f;
-        GameManager.instance.pause = true;
+        //GameManager.instance.pause = true;
         pauseUI.SetActive(true);
         playerUI.SetActive(false);
         Cursor.visible = true;
@@ -82,7 +88,7 @@ public class UIController : MonoBehaviour
     public void UnPauseGame()
     {
         Time.timeScale = 1.0f;
-        GameManager.instance.pause = false;
+        //GameManager.instance.pause = false;
         pauseUI.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         playerUI.SetActive(true);

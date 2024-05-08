@@ -13,8 +13,8 @@ public class LobbyManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         Cursor.lockState = CursorLockMode.Locked;
-        GameObject.FindWithTag("Player").GetComponent<Player>().health = 100;
-        tokens = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().token;
+        //GameObject.FindWithTag("Player").GetComponent<Player>().health = 100;
+        //tokens = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().token;
     }
 
     // Update is called once per frame
