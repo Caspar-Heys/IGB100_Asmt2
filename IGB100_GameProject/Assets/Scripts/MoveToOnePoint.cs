@@ -6,7 +6,7 @@ public class MoveToOnePoint : MonoBehaviour
 {
     UnityEngine.AI.NavMeshAgent agent;
     private Transform waypoint;
-    private float distanceXZ = 0.0f;
+    //private float distanceXZ = 0.0f;
 
 
     // Start is called before the first frame update

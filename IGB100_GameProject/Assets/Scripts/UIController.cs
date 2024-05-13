@@ -23,6 +23,7 @@ public class UIController : MonoBehaviour
     public GameObject winUI;
     public GameObject loseUI;
     public GameObject bossUI;
+    public GameObject roomClearUI;
 
     public TMP_Text fpsUI;
 
@@ -152,6 +153,21 @@ public class UIController : MonoBehaviour
     {
         bossUI.SetActive(false);
     }
+    public void ShowRoomClearUI()
+    {
+        roomClearUI.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+    public void HideRoomClearUI()
+    {
+        roomClearUI.SetActive(false);
+    }
+    public void GotoLounge()
+    {
+        GameManager.instance.TeleportToLounge();
+        HideRoomClearUI();
+    }
     public void UpdateBossHpBar(float hp, float hpMax)
     {
         bossHpBar.value = hp / hpMax;
@@ -160,5 +176,6 @@ public class UIController : MonoBehaviour
     {
         Application.Quit();
     }
+
     
 }

@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController Controller;
     private Vector3 CurrentMoveVelocity;
     private Vector3 MoveDampVelocity;
+    private float teleportTimer = 0.0f;
 
     private Vector3 CurrentForceVelocity;
     // Start is called before the first frame update
@@ -23,6 +24,15 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        TeleportCountDown();
+        if (teleportTimer == 0)
+        {
+            Movement();
+        }
+    }
+
+    private void Movement()
     {
         Vector3 PlayerInput = new Vector3
         {
@@ -65,5 +75,18 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Controller.Move(CurrentForceVelocity * Time.deltaTime);
+    }
+
+    public void Teleport(Transform t)
+    {
+        teleportTimer = 0.5f;
+        Debug.Log("teleported");
+        Controller.transform.position = t.position;
+        Controller.transform.rotation = t.rotation;
+    }
+    public void TeleportCountDown()
+    {
+        teleportTimer -= Time.deltaTime;
+        if (teleportTimer < 0.0f) teleportTimer = 0.0f;
     }
 }

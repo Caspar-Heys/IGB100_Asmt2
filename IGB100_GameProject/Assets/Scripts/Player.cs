@@ -101,5 +101,6 @@ public class Player : MonoBehaviour {
         ultimateSkillID = ID;
         ultimateSkillName = name;
     }
+
     
 }

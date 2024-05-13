@@ -19,12 +19,14 @@ public class Enemy : MonoBehaviour {
     public int score = 100;
 
     public bool isBoss = false;
+    private float supportTimer = 0.0f;
+    private float supportTimerMax = 1.0f;
 
     private float hurtFlashingTimer = 0.0f;
     private float hurtFlashingRate = 0.05f;
     private float flashDuration = 0.0f;
     private float flashDurationMax = 0.2f;
-    private bool bright = true;
+    private bool bright = false;
     public SkinnedMeshRenderer thisRenderer;
     private Color currentColour;
     private Color emissionColour;
@@ -42,6 +44,7 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Flashing();
+        SupprortCountdown();
     }
 
     //Public method for taking damage and dying
@@ -56,19 +59,18 @@ public class Enemy : MonoBehaviour {
             {
                 GetComponent<BossManagement>().SetBattleStage(2);
             }
-            
         }
         if (health <= 0) {
             if (isBoss)
             {
                 GameManager.instance.win = true;
                 GameManager.instance.GameOver();
-                
             }
             Instantiate(deathEffect, transform.position, transform.rotation);
             GameManager.instance.token += token;
             GameManager.instance.score += score;
             GameManager.instance.player.GetComponent<Player>().AddKillIntention(killIntention);
+            GameManager.instance.ReduceEnemyCount(1);
             Destroy(this.gameObject);
         }
     }
@@ -124,6 +126,7 @@ public class Enemy : MonoBehaviour {
             if (flashDuration < 0)
             {
                 thisRenderer.material.SetColor("_EmissionColor", currentColour);
+                bright = false;
                 flashDuration = 0;
             }
         }
@@ -132,5 +135,34 @@ public class Enemy : MonoBehaviour {
     private void AddFlashDuration()
     {
         flashDuration = flashDurationMax;
+        bright = true;
+    }
+
+    public void SetSupport(float t)
+    {
+        supportTimer += t;
+        if (supportTimer > supportTimerMax)
+        {
+            supportTimer = supportTimerMax;
+        }
+    }
+    private void SupprortCountdown()
+    {
+        supportTimer -= Time.deltaTime;
+        if (supportTimer < 0)
+        {
+            supportTimer = 0;
+        }
+    }
+
+    public bool CheckIsSupported()
+    {
+        if (supportTimer > 0) {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour
 {
 
     public float startTime;
-    public GameObject level01Prefeb;
-    private GameObject level01;
+    private GameObject enemySpawner;
     //public float maxTime = 15.0f;
     //Singleton Setup
     public static GameManager instance = null;
@@ -23,6 +22,19 @@ public class GameManager : MonoBehaviour
     public bool pause = false;
     public bool hasPlayed = false;
     public bool bossFight = false;
+    private bool isRoomClear = false;
+
+    public int roomMax = 3; // Start counting from 1
+    public int currentRoom = 0; // Start counting from 0
+    public int[] totalEnemyInEachRoom;
+    private int currentEnemyCount = 0;
+    public Transform[] teleportPointInRooms;
+    public Transform teleportPointInLounge;
+    public GameObject door;
+
+    public GameObject[] enemySpawnerInEachRoom;
+    //public GameObject enemySpawnerInBossRoom;
+
 
     public int token = 0;
     public int score = 0;
@@ -53,9 +65,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         Debug.Log("game start");
-        level01 = Instantiate(level01Prefeb, transform.position, transform.rotation);
-        startTime = Time.time;
-        Cursor.lockState = CursorLockMode.Locked;
+        TeleportToRoom();
         player.GetComponent<Player>().health = 100;
         gameOver = false;
         win = false;
@@ -65,8 +75,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //time += Time.deltaTime;
-
-        
+        if (!bossFight)
+        {
+            RoomClear();
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            TeleportToLounge();
+        }
+        AutoTeleportToRoom();
     }
 
 
@@ -91,7 +108,7 @@ public class GameManager : MonoBehaviour
         }
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-
+        Destroy(enemySpawner);
 
     }
 
@@ -112,5 +129,56 @@ public class GameManager : MonoBehaviour
     {
         uiController.GetComponent<UIController>().UpdateBossHpBar(hp, hpMax);
     }
-   
+
+    public void ReduceEnemyCount(int c)
+    {
+        currentEnemyCount -= c;
+        if (currentEnemyCount < 0)
+        {
+            Debug.Log("Error: currentEnemyCount < 0! currentEnemyCount = " + currentEnemyCount);
+            currentEnemyCount = 0;
+        }
+    }
+
+    private void RoomClear()
+    {
+        if (!isRoomClear && currentEnemyCount <= 0)
+        {
+            currentRoom++;
+            isRoomClear = true;
+            if (currentRoom >= roomMax)
+            {
+                //Debug.Log("Error: currentRoom >= roomMax! currentRoom = " + currentRoom);
+                currentRoom = roomMax - 1;
+            }
+            uiController.GetComponent<UIController>().ShowRoomClearUI();
+        } 
+    }
+
+    public void TeleportToLounge()
+    {
+        player.GetComponent<PlayerMovement>().Teleport(teleportPointInLounge);
+        //player.transform.position = teleportPointInLounge.position;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void AutoTeleportToRoom()
+    {
+        if (Vector3.Distance(player.transform.position, door.transform.position) < 1.0f)
+        {
+            TeleportToRoom();
+        }
+    }
+
+    public void TeleportToRoom() // and start fight
+    {
+        startTime = Time.time;
+        isRoomClear = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        currentEnemyCount = totalEnemyInEachRoom[currentRoom];
+        enemySpawner = Instantiate(enemySpawnerInEachRoom[currentRoom], transform.position, transform.rotation);
+        player.GetComponent<PlayerMovement>().Teleport(teleportPointInRooms[currentRoom]);
+
+    }
 }
