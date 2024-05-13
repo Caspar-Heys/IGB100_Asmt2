@@ -354,8 +354,10 @@ MonoBehaviour:
   fireRound: 99
   fireRate: 3
   bulletSpeed: 10
+  bulletSpeedPlus: 13
   fireString: 3
   bulletSpeedDown: 1
   firingAnimationCD: 1
   enemybullet: {fileID: 73295874713200220, guid: 9257578efd5f60949ba87efbf627ab8c, type: 3}
+  enemybulletPlus: {fileID: 73295874713200220, guid: 2158cdb297350c14f846697e33d9938e, type: 3}
   muzzle: {fileID: 664897562146820210}

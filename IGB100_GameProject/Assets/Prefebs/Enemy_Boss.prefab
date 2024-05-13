@@ -345,11 +345,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muzzleL: {fileID: 2097296694083581480}
   muzzleR: {fileID: 2097296694083581480}
-  bossBullet: {fileID: 73295874713200220, guid: 2158cdb297350c14f846697e33d9938e, type: 3}
+  bossBullet: {fileID: 73295874713200220, guid: 9257578efd5f60949ba87efbf627ab8c, type: 3}
   waypoints:
-  - {fileID: 6943339862227310676, guid: 8e378f4387151c94980c57e36641335d, type: 3}
-  - {fileID: 9031368670712900683, guid: 72267e7a8a25ae64cbf04b4b696a1a0b, type: 3}
   - {fileID: 3392313781348268084, guid: 00d5cb5a756ca4d438e78e521bdff9c5, type: 3}
+  - {fileID: 9031368670712900683, guid: 72267e7a8a25ae64cbf04b4b696a1a0b, type: 3}
+  - {fileID: 6943339862227310676, guid: 8e378f4387151c94980c57e36641335d, type: 3}
   firing: 0
   shootSpreadRoundMax: 3
   shootSpreadRate: 1
