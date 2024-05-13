@@ -201,7 +201,7 @@ PrefabInstance:
       addedObject: {fileID: 2840370356444464242}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7dfdcc4fb9233ad47a1668ab70572974, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 148713873411255809}
+      addedObject: {fileID: -4837498395451983909}
   m_SourcePrefab: {fileID: 100100000, guid: 7dfdcc4fb9233ad47a1668ab70572974, type: 3}
 --- !u!137 &1174629631627126526 stripped
 SkinnedMeshRenderer:
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthMax: 2500
-  hitDamage: 25
+  hitDamage: 0
   killIntention: 10
   token: 1
   score: 100
@@ -331,7 +331,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &148713873411255809
+--- !u!114 &-4837498395451983909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,16 +340,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1897724525886109981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c891cd712480fca45ae3298ccc34b16d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cb4d34f4496b1c41840b46729e154a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muzzleL: {fileID: 2097296694083581480}
-  muzzleR: {fileID: 2097296694083581480}
+  muzzleL: {fileID: 3719946982451518002}
+  muzzleR: {fileID: 3719946982451518002}
   bossBullet: {fileID: 73295874713200220, guid: 2158cdb297350c14f846697e33d9938e, type: 3}
   waypoints:
-  - {fileID: 6943339862227310676, guid: 8e378f4387151c94980c57e36641335d, type: 3}
-  - {fileID: 9031368670712900683, guid: 72267e7a8a25ae64cbf04b4b696a1a0b, type: 3}
-  - {fileID: 3392313781348268084, guid: 00d5cb5a756ca4d438e78e521bdff9c5, type: 3}
+  - {fileID: 665944703138063966, guid: 668a2d4d4f1c394458437d9679215e42, type: 3}
+  - {fileID: 8829166852838936803, guid: 072dd237ad37a1448a58d1d1a4e3cca7, type: 3}
+  - {fileID: 7747601949066504354, guid: 662f32fb61ddcd64695d8ee551de39c8, type: 3}
+  - {fileID: 1483135158781249989, guid: 45d4c5392cb10de468756d938d4e51a9, type: 3}
   firing: 0
   shootSpreadRoundMax: 3
   shootSpreadRate: 1
@@ -358,8 +359,9 @@ MonoBehaviour:
   bulletSpeed: 8
   speed: 16
   chargeSpeed: 24
---- !u!1 &2097296694083581480 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 7dfdcc4fb9233ad47a1668ab70572974, type: 3}
-  m_PrefabInstance: {fileID: 1627905817081660492}
-  m_PrefabAsset: {fileID: 0}
+  jumpHeight: 8
+  jumpDuration: 2
+  lockingEffect: {fileID: 7991387050650021333, guid: 223436c73f3834748ae3c212edcdd31f, type: 3}
+  boom: {fileID: 6364541368797849762, guid: 511dceb023c46c74ab1869db135b5341, type: 3}
+  boomDamage: 25
+  boomRange: 8

@@ -19,12 +19,14 @@ public class Enemy : MonoBehaviour {
     public int score = 100;
 
     public bool isBoss = false;
+    private float supportTimer = 0.0f;
+    private float supportTimerMax = 2.1f;
 
     private float hurtFlashingTimer = 0.0f;
     private float hurtFlashingRate = 0.05f;
     private float flashDuration = 0.0f;
     private float flashDurationMax = 0.2f;
-    private bool bright = true;
+    private bool bright = false;
     public SkinnedMeshRenderer thisRenderer;
     private Color currentColour;
     private Color emissionColour;
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         health = healthMax;
+        thisRenderer.material.EnableKeyword("_EMISSION");
         currentColour = thisRenderer.material.GetColor("_EmissionColor");
         emissionColour = new Color(1.0f, 0.0f, 0.0f);
     }
@@ -42,6 +45,7 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Flashing();
+        SupprortCountdown();
     }
 
     //Public method for taking damage and dying
@@ -49,26 +53,25 @@ public class Enemy : MonoBehaviour {
         health -= dmg;
         //Debug.Log("hit");
         AddFlashDuration();
-        if (isBoss )
+        if (isBoss)
         {
             GameManager.instance.UpdateBossHpBar(health, healthMax);
-            if (GetComponent<BossManagement>().GetBattleStage() == 1 && health < healthMax / 2)
+            if (GetComponent<BossManagementJump>().GetBattleStage() == 1 && health < healthMax / 2)
             {
-                GetComponent<BossManagement>().SetBattleStage(2);
+                GetComponent<BossManagementJump>().SetBattleStage(2);
             }
-            
         }
         if (health <= 0) {
             if (isBoss)
             {
                 GameManager.instance.win = true;
                 GameManager.instance.GameOver();
-                
             }
             Instantiate(deathEffect, transform.position, transform.rotation);
             GameManager.instance.token += token;
             GameManager.instance.score += score;
             GameManager.instance.player.GetComponent<Player>().AddKillIntention(killIntention);
+            GameManager.instance.ReduceEnemyCount(1);
             Destroy(this.gameObject);
         }
     }
@@ -111,7 +114,7 @@ public class Enemy : MonoBehaviour {
                 if (bright)
                 {
                     thisRenderer.material.SetColor("_EmissionColor", emissionColour);
-                    thisRenderer.material.EnableKeyword("_EMISSION");
+                    
                 }
                 else
                 {
@@ -124,6 +127,7 @@ public class Enemy : MonoBehaviour {
             if (flashDuration < 0)
             {
                 thisRenderer.material.SetColor("_EmissionColor", currentColour);
+                bright = false;
                 flashDuration = 0;
             }
         }
@@ -132,5 +136,34 @@ public class Enemy : MonoBehaviour {
     private void AddFlashDuration()
     {
         flashDuration = flashDurationMax;
+        bright = true;
+    }
+
+    public void SetSupport(float t)
+    {
+        supportTimer += t;
+        if (supportTimer > supportTimerMax)
+        {
+            supportTimer = supportTimerMax;
+        }
+    }
+    private void SupprortCountdown()
+    {
+        supportTimer -= Time.deltaTime;
+        if (supportTimer < 0)
+        {
+            supportTimer = 0;
+        }
+    }
+
+    public bool CheckIsSupported()
+    {
+        if (supportTimer > 0) {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

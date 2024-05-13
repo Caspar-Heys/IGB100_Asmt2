@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
-
 
 public class Player : MonoBehaviour {
 
@@ -11,45 +9,28 @@ public class Player : MonoBehaviour {
     public float maxHealth;
     public float killIntention;
     public float maxKillIntention;
-    public float ShotGunFireRate;
-    public float GrimbrandFireRate;
-    public int ultimateSkillID;
-    public string ultimateSkillName;
+    public int ultimateSkillID = 1;
+    private string ultimateSkillName = "Heal";
     public GameObject mainCamera;
     public GameObject[] weapons;
-    public GameObject EnemyBullet;
-    public IConsumable[] Potions;
+
+    private float teleportTimer = 0.0f; // do not delete this
 
     //UI Elements
     public GameObject uiController;
     
     // Use this for initialization
-    void Start () 
-    {
-        SwitchWeapon(1);
-        if (ultimateSkillID == 1) { ultimateSkillName = "Heal"; }
-        else if(ultimateSkillID == 2){ ultimateSkillName = "Adrenaline Surge"; }
+    void Start () {
         uiController.GetComponent<UIController>().UpdateHpBar(health, maxHealth);
         uiController.GetComponent<UIController>().UpdateKillIntentionBar(killIntention, maxKillIntention, ultimateSkillName);
-        Potions[0] = gameObject.GetComponentInChildren<DeftFinger>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (!GameManager.instance.menu && !GameManager.instance.pause)
+        TeleportCountDown();
+        if (!GameManager.instance.menu && !GameManager.instance.pause && Input.GetKey("f"))
         {
-            if (Input.GetKeyDown("f"))
-            {
-                UseUltimateSkill();
-            }
-            if (Input.GetKeyDown("1"))
-            {
-                SwitchWeapon(1);
-            }
-            if (Input.GetKeyDown("2"))
-            {
-                SwitchWeapon(2);
-            }
+            UseUltimateSkill();
         }
     }
 
@@ -82,22 +63,6 @@ public class Player : MonoBehaviour {
         uiController.GetComponent<UIController>().UpdateKillIntentionBar(killIntention, maxKillIntention, ultimateSkillName);
         
     }
-    public void SwitchWeapon(int playerInput)
-    {
-        if(playerInput == 1) //Switches to Pistol
-        {
-            weapons[0].SetActive(true);
-            weapons[1].SetActive(false);
-            uiController.GetComponent<UIController>().UpdateMagazineBar(weapons[0].GetComponent<Grimbrand>().magazine, weapons[0].GetComponent<Grimbrand>().maxMagazine, weapons[0].GetComponent<Grimbrand>().reloading);
-        }
-        else if(playerInput == 2) //Switches to ShotGun
-        {
-            weapons[0].SetActive(false);
-            weapons[1].SetActive(true);
-            uiController.GetComponent<UIController>().UpdateMagazineBar(weapons[1].GetComponent<ShotGun>().magazine, weapons[1].GetComponent<ShotGun>().maxMagazine, weapons[1].GetComponent<ShotGun>().reloading);
-        }
-        // need to add another if statement for bazooka
-    }
 
     public void UseUltimateSkill()
     {
@@ -110,8 +75,6 @@ public class Player : MonoBehaviour {
                     USkill_Heal();
                     break;
                 case 2:
-                    killIntention = 0;
-                    USkill_AdrenalineSurge();
                     break;
                 default:
                     Debug.Log("Wrong ultimateSkillID: " + ultimateSkillID);
@@ -136,23 +99,34 @@ public class Player : MonoBehaviour {
         uiController.GetComponent<UIController>().UpdateKillIntentionBar(killIntention, maxKillIntention, ultimateSkillName);
     }
 
-    public void USkill_AdrenalineSurge()
-    {
-        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
-        {
-            enemy.GetComponent<NavMeshAgent>().speed /= 2;
-        }
-        foreach(GameObject projectile in GameObject.FindGameObjectsWithTag("EnemyBullet"))
-        {
-            projectile.GetComponent<EnemyBulletRed>().moveSpeed /= 2;
-        }
-        EnemyBullet.GetComponent<EnemyBulletRed>().moveSpeed /= 2;
-    }
-
-    public void ChangeUltimateSkill(int ID, string name)
+    public void ChangeSkill(int ID, string name)
     {
         ultimateSkillID = ID;
         ultimateSkillName = name;
     }
-    
+
+    public void Teleport(Transform t)
+    {
+        teleportTimer = 0.2f;
+        Debug.Log("teleported");
+        transform.position = t.position;
+        GetComponent<PlayerLook>().SetRotation(t);
+    }
+
+    public void TeleportCountDown()
+    {
+        if (teleportTimer > 0.0f)
+        {
+            teleportTimer -= Time.deltaTime;
+        }
+        else
+        {
+            teleportTimer = 0.0f;
+        }
+    }
+
+    public float GetTeleportTimer()
+    {
+        return teleportTimer;
+    }
 }

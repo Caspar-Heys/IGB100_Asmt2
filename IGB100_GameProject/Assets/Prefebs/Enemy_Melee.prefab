@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthMax: 100
-  hitDamage: 25
+  hitDamage: 15
   killIntention: 10
   token: 1
   score: 100

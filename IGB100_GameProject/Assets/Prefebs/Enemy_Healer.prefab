@@ -91,6 +91,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4221733131125851080}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -49772475084334908}
   m_SourcePrefab: {fileID: 100100000, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
 --- !u!137 &4734240446993115509 stripped
 SkinnedMeshRenderer:
@@ -228,8 +231,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitingTime: 1
-  heal: 30
-  healRate: 1
+  heal: 50
+  healRate: 3
   healRange: 100
   healRound: 100
+  effectHeal: {fileID: 7355591424859418038, guid: 2aca54b07a989ba409a7881e368afff7, type: 3}
   healingAnimationCD: 1
+--- !u!114 &-49772475084334908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5451725621685859990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eacc4f9b51d1d244923302a9da0497b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetName: Enemy_Boss(Clone)
+  distance: 8
