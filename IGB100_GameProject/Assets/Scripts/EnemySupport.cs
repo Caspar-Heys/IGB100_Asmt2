@@ -7,7 +7,7 @@ public class EnemySupport : MonoBehaviour
     public float waitingTime = 1.0f;
     private float spawnTime = 0.0f;
 
-    public float supportRate = 0.5f;
+    public float supportRate = 2.0f;
     private float supportTimer = 0.0f;
     public float supportRange = 10.0f;
     
@@ -17,10 +17,13 @@ public class EnemySupport : MonoBehaviour
     public float supportingAnimationCD = 1.0f;
     private float supportingAnimationTimer;
 
+    public GameObject supportEffect;
+
     // Start is called before the first frame update
     void Start()
     {
         spawnTime = Time.time;
+        
 
     }
 
@@ -46,9 +49,11 @@ public class EnemySupport : MonoBehaviour
                 if (Vector3.Distance(target.transform.position, transform.position) < supportRange)
                 {
                     //transform.LookAt(target.transform.position);
-                    target.GetComponent<Enemy>().SetSupport(1.0f);
+                    target.GetComponent<Enemy>().SetSupport(supportRate + 0.1f);
                 }
             }
+            GameObject tempEffect = Instantiate(supportEffect, transform.position, transform.rotation);
+            tempEffect.GetComponent<EffectOnObject>().SetTarget(this.gameObject);
             supportTimer = Time.time + supportRate;
         }
         if (supporting && Time.time > supportingAnimationTimer + supportingAnimationCD)

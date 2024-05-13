@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour {
 
     public bool isBoss = false;
     private float supportTimer = 0.0f;
-    private float supportTimerMax = 1.0f;
+    private float supportTimerMax = 2.1f;
 
     private float hurtFlashingTimer = 0.0f;
     private float hurtFlashingRate = 0.05f;

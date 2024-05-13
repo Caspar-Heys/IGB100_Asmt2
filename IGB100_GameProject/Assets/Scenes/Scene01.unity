@@ -3861,7 +3861,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.258, y: 8, z: 35}
-  m_LocalScale: {x: 6.8132796, y: 16, z: 1}
+  m_LocalScale: {x: 6.2777557, y: 16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1938787391}
@@ -5420,7 +5420,9 @@ MonoBehaviour:
   bulletHit: {fileID: 159918, guid: c739d85538d8be5479d89ead64e8d176, type: 3}
   muzzle: {fileID: 888837238}
   raycastTarget: {fileID: 838819479}
-  fireSound: {fileID: 7320979567698883279, guid: e002c1b14d7bad24a9dea7a0444d2d48, type: 3}
+  fireSound: {fileID: 6211966719560247750, guid: 9674dab82b2359649806744d6bcaba05, type: 3}
+  fireSoundEmpty: {fileID: 2196845353736389163, guid: abd34d6190e95834b929de64b070ce66, type: 3}
+  reloadSound: {fileID: 663448108061736200, guid: 371aa8b401b4b5249bb22cf706dce5d2, type: 3}
 --- !u!111 &931585849
 Animation:
   m_ObjectHideFlags: 0
@@ -6824,7 +6826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841938898020502733, guid: 34916690fa9cabf4e895a1b2d2417ad2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.645
+      value: -9.7
       objectReference: {fileID: 0}
     - target: {fileID: 2841938898020502733, guid: 34916690fa9cabf4e895a1b2d2417ad2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6832,7 +6834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841938898020502733, guid: 34916690fa9cabf4e895a1b2d2417ad2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -161.318
+      value: -10.9
       objectReference: {fileID: 0}
     - target: {fileID: 2841938898020502733, guid: 34916690fa9cabf4e895a1b2d2417ad2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9409,7 +9411,7 @@ MonoBehaviour:
   hasPlayed: 0
   bossFight: 0
   roomMax: 4
-  currentRoom: 3
+  currentRoom: 0
   totalEnemyInEachRoom: 100000001800000020000000e7030000
   teleportPointInRooms:
   - {fileID: 2537123169996042934, guid: 62488ec7298365b44adde4599ce6e891, type: 3}
@@ -9574,7 +9576,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.98, y: 8, z: 35}
-  m_LocalScale: {x: 7.288801, y: 16, z: 1}
+  m_LocalScale: {x: 6.417207, y: 16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1938787391}

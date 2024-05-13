@@ -26,6 +26,8 @@ public class Grimbrand : MonoBehaviour
 
     // audio
     public GameObject fireSound;
+    public GameObject fireSoundEmpty;
+    public GameObject reloadSound;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +67,7 @@ public class Grimbrand : MonoBehaviour
             }
             else
             {
+                Instantiate(fireSoundEmpty, transform.position, transform.rotation);
                 // need reload
                 uiController.GetComponent<UIController>().UpdateMagazineBar(magazine, maxMagazine, reloading);
             }
@@ -78,6 +81,7 @@ public class Grimbrand : MonoBehaviour
             reloading = true;
             reloadTimer = Time.time;
             uiController.GetComponent<UIController>().UpdateMagazineBar(magazine, maxMagazine, reloading);
+            Instantiate(reloadSound, transform.position, transform.rotation);
         }
         if (reloading)
         {

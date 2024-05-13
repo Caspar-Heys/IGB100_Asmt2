@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitingTime: 3
-  supportRate: 0.5
+  supportRate: 2
   supportRange: 100
   supportingAnimationCD: 1
+  supportEffect: {fileID: 2921940344220333904, guid: 165e3f3efe9ae13418b2cf1537f6ef48, type: 3}

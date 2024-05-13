@@ -46,7 +46,7 @@ public class BossManagementJump : MonoBehaviour
     public GameObject lockingEffect;
     public GameObject boom;
     public float boomDamage = 25.0f;
-    public float boomRange = 3.5f;
+    public float boomRange = 8.0f;
 
 
     // Start is called before the first frame update
