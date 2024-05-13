@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBulletRed : MonoBehaviour
 {
     public float lifeTime = 10.0f;
-    private float moveSpeed = 5.0f;
+    public float moveSpeed = 5.0f;
     public float damage = 10.0f;
 
 

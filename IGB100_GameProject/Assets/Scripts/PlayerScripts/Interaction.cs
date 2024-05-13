@@ -24,7 +24,7 @@ public class Interaction : MonoBehaviour
             {
                 InteractPrompt.SetActive(true);
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     interactObj.Interact();
                     Cursor.lockState = CursorLockMode.None;

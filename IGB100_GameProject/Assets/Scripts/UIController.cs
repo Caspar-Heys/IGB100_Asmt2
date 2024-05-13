@@ -84,6 +84,7 @@ public class UIController : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
         GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponentInChildren<ShotGun>().enabled = false;
     }
     public void UnPauseGame()
     {
@@ -96,6 +97,7 @@ public class UIController : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = true;
         GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponentInChildren<ShotGun>().enabled = true;
     }
     public void ShowWinUI()
     {

@@ -1163,7 +1163,7 @@ GameObject:
   - component: {fileID: 3042200315960950108}
   m_Layer: 5
   m_Name: UIController
-  m_TagString: Untagged
+  m_TagString: UIController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1271,14 +1271,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08da9bec957aec48823d76246ed236e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuUI: {fileID: 2030248790655759550}
-  instructionsUI: {fileID: 2300318549235613486}
-  optionsUI: {fileID: 6175432873238029739}
   InteractPrompt: {fileID: 4109606480731348476}
   playerUI: {fileID: 3932713097656169166}
+  ShopUI: {fileID: 0}
   healthBar: {fileID: 2682100988042804436}
   killIntentionBar: {fileID: 4916678488327826322}
   magazineBar: {fileID: 4145596681710534560}
+  bossHpBar: {fileID: 0}
   hpTxt: {fileID: 1401686617470773894}
   kiTxt: {fileID: 3182817502925334213}
   pressF: {fileID: 8929778747070642173}
@@ -1286,6 +1285,7 @@ MonoBehaviour:
   pauseUI: {fileID: 4137833643812004668}
   winUI: {fileID: 6694943580400825774}
   loseUI: {fileID: 6816658157841045453}
+  bossUI: {fileID: 0}
   fpsUI: {fileID: 6714160709143167372}
 --- !u!1 &1683480702111688052
 GameObject:
@@ -3363,7 +3363,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PRESS ''E'' TO INTERACT
+  m_text: 'PRESS ''F'' TO INTERACT
 
 '
   m_isRightToLeft: 0
@@ -3392,7 +3392,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.95
+  m_fontSize: 54.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -9,6 +9,15 @@ TagManager:
   - Terrain
   - Enemy
   - GameManager
+  - Table
+  - Chair
+  - Grimbrand
+  - Shotgun
+  - Inventory
+  - UIController
+  - ActiveSkill1
+  - ActiveSkill2
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

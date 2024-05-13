@@ -8,14 +8,14 @@ public class Grimbrand : MonoBehaviour
     public GameObject uiController;
     // fire variables
     public float damage = 50.0f;
-    public float fireRate = 0;
+    public float fireRate;
     private float fireTimer = 0.0f;
 
     public float magazine = 12;
     public float maxMagazine = 12;
     public float reloadCD = 2.0f;
     private float reloadTimer;
-    private bool reloading = false;
+    public bool reloading = false;
     
 
     // fire
@@ -37,6 +37,7 @@ public class Grimbrand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        fireRate = GameObject.FindWithTag("Player").GetComponent<Player>().GrimbrandFireRate;
         WeaponFiring();
         Reload();
     }
