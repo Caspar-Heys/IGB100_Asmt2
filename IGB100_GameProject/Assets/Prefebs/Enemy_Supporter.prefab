@@ -228,6 +228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitingTime: 3
-  supportRate: 3
+  supportRate: 0.5
   supportRange: 100
-  supportingAnimationCD: 2
+  supportingAnimationCD: 1

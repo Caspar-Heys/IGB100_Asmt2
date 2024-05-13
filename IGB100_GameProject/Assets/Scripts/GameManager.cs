@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
 
     public void TeleportToLounge()
     {
-        player.GetComponent<PlayerMovement>().Teleport(teleportPointInLounge);
+        player.GetComponent<Player>().Teleport(teleportPointInLounge);
         //player.transform.position = teleportPointInLounge.position;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -178,7 +178,7 @@ public class GameManager : MonoBehaviour
 
         currentEnemyCount = totalEnemyInEachRoom[currentRoom];
         enemySpawner = Instantiate(enemySpawnerInEachRoom[currentRoom], transform.position, transform.rotation);
-        player.GetComponent<PlayerMovement>().Teleport(teleportPointInRooms[currentRoom]);
+        player.GetComponent<Player>().Teleport(teleportPointInRooms[currentRoom]);
 
     }
 }

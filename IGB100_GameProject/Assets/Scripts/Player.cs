@@ -14,6 +14,8 @@ public class Player : MonoBehaviour {
     public GameObject mainCamera;
     public GameObject[] weapons;
 
+    private float teleportTimer = 0.0f; // do not delete this
+
     //UI Elements
     public GameObject uiController;
     
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        TeleportCountDown();
         if (!GameManager.instance.menu && !GameManager.instance.pause && Input.GetKey("f"))
         {
             UseUltimateSkill();
@@ -102,5 +105,22 @@ public class Player : MonoBehaviour {
         ultimateSkillName = name;
     }
 
-    
+    public void Teleport(Transform t)
+    {
+        teleportTimer = 0.2f;
+        Debug.Log("teleported");
+        transform.position = t.position;
+        GetComponent<PlayerLook>().SetRotation(t);
+        
+    }
+    public void TeleportCountDown()
+    {
+        teleportTimer -= Time.deltaTime;
+        if (teleportTimer < 0.0f) teleportTimer = 0.0f;
+    }
+
+    public float GetTeleportTimer()
+    {
+        return teleportTimer;
+    }
 }

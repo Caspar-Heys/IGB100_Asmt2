@@ -25,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TeleportCountDown();
-        if (teleportTimer == 0)
+        
+        if (GetComponent<Player>().GetTeleportTimer() == 0)
         {
             Movement();
         }
@@ -77,16 +77,5 @@ public class PlayerMovement : MonoBehaviour
         Controller.Move(CurrentForceVelocity * Time.deltaTime);
     }
 
-    public void Teleport(Transform t)
-    {
-        teleportTimer = 0.5f;
-        Debug.Log("teleported");
-        Controller.transform.position = t.position;
-        Controller.transform.rotation = t.rotation;
-    }
-    public void TeleportCountDown()
-    {
-        teleportTimer -= Time.deltaTime;
-        if (teleportTimer < 0.0f) teleportTimer = 0.0f;
-    }
+    
 }

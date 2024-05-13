@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         health = healthMax;
+        thisRenderer.material.EnableKeyword("_EMISSION");
         currentColour = thisRenderer.material.GetColor("_EmissionColor");
         emissionColour = new Color(1.0f, 0.0f, 0.0f);
     }
@@ -113,7 +114,7 @@ public class Enemy : MonoBehaviour {
                 if (bright)
                 {
                     thisRenderer.material.SetColor("_EmissionColor", emissionColour);
-                    thisRenderer.material.EnableKeyword("_EMISSION");
+                    
                 }
                 else
                 {
