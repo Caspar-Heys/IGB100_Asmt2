@@ -111,8 +111,8 @@ public class Player : MonoBehaviour {
         Debug.Log("teleported");
         transform.position = t.position;
         GetComponent<PlayerLook>().SetRotation(t);
-        
     }
+
     public void TeleportCountDown()
     {
         teleportTimer -= Time.deltaTime;
