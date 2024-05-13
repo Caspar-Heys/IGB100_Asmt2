@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grimbrand
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5f9b176058917ba49a8059f6da098866, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5f9b176058917ba49a8059f6da098866, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
