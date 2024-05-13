@@ -8,12 +8,13 @@ public class EnemyHeal : MonoBehaviour
     private float spawnTime = 0.0f;
 
     public float heal = 30;
-    public float healRate = 0.5f;
+    public float healRate = 3.0f;
     private float healTimer = 0.0f;
     public float healRange = 10.0f;
     public int healRound = 10;
     private bool healing = false;
     private GameObject[] targets;
+    public GameObject effectHeal;
     
     public float healingAnimationCD = 1.0f;
     private float healingAnimationTimer;
@@ -48,6 +49,8 @@ public class EnemyHeal : MonoBehaviour
                 {
                     //transform.LookAt(target.transform.position);
                     target.GetComponent<Enemy>().AddHp(heal);
+                    GameObject tempHeal = Instantiate(effectHeal, target.transform.position, target.transform.rotation);
+                    tempHeal.GetComponent<EffectOnObject>().SetTarget(target);
                 } 
             }
             healTimer = Time.time + healRate;

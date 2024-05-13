@@ -115,8 +115,14 @@ public class Player : MonoBehaviour {
 
     public void TeleportCountDown()
     {
-        teleportTimer -= Time.deltaTime;
-        if (teleportTimer < 0.0f) teleportTimer = 0.0f;
+        if (teleportTimer > 0.0f)
+        {
+            teleportTimer -= Time.deltaTime;
+        }
+        else
+        {
+            teleportTimer = 0.0f;
+        }
     }
 
     public float GetTeleportTimer()

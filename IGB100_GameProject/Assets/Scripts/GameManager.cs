@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] enemySpawnerInEachRoom;
     //public GameObject enemySpawnerInBossRoom;
-
+    public GameObject roof;
 
     public int token = 0;
     public int score = 0;
@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
         player.GetComponent<Player>().health = 100;
         gameOver = false;
         win = false;
+        roof.SetActive(true);
     }
 
     // Update is called once per frame

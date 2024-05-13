@@ -55,12 +55,12 @@ public class ShootString : MonoBehaviour
             {
                 if (GetComponent<Enemy>().CheckIsSupported()) 
                 {
-                    GameObject enemyBulletPlus = Instantiate(enemybulletPlus, muzzle.transform.position, muzzle.transform.rotation);
-                    enemyBulletPlus.GetComponent<EnemyBulletRed>().SetSpeed(bulletSpeedPlus - i * bulletSpeedDown);                }
+                    GameObject tempBullet = Instantiate(enemybulletPlus, muzzle.transform.position, muzzle.transform.rotation);
+                    tempBullet.GetComponent<EnemyBulletRed>().SetSpeed(bulletSpeedPlus - i * bulletSpeedDown);                }
                 else
                 {
-                    GameObject enemyBullet = Instantiate(enemybullet, muzzle.transform.position, muzzle.transform.rotation);
-                    enemyBullet.GetComponent<EnemyBulletRed>().SetSpeed(bulletSpeed - i * bulletSpeedDown);
+                    GameObject tempBullet = Instantiate(enemybullet, muzzle.transform.position, muzzle.transform.rotation);
+                    tempBullet.GetComponent<EnemyBulletRed>().SetSpeed(bulletSpeed - i * bulletSpeedDown);
                 }    
                 
             }

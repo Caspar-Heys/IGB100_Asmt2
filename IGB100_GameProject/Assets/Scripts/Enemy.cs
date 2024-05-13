@@ -53,12 +53,12 @@ public class Enemy : MonoBehaviour {
         health -= dmg;
         //Debug.Log("hit");
         AddFlashDuration();
-        if (isBoss )
+        if (isBoss)
         {
             GameManager.instance.UpdateBossHpBar(health, healthMax);
-            if (GetComponent<BossManagement>().GetBattleStage() == 1 && health < healthMax / 2)
+            if (GetComponent<BossManagementJump>().GetBattleStage() == 1 && health < healthMax / 2)
             {
-                GetComponent<BossManagement>().SetBattleStage(2);
+                GetComponent<BossManagementJump>().SetBattleStage(2);
             }
         }
         if (health <= 0) {

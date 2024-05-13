@@ -38,9 +38,6 @@ public class BossManagement : MonoBehaviour
     public float speed = 5.0f;
     public float chargeSpeed = 8.0f;
 
-    
-
-
     // Start is called before the first frame update
     void Start()
     {
