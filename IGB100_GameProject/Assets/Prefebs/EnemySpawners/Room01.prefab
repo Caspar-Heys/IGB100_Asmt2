@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3621285990567868905}
-  - component: {fileID: 9073367981351650176}
+  - component: {fileID: 2051259746935990872}
   m_Layer: 0
   m_Name: MeleeLeft
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7212569018954166668}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9073367981351650176
+--- !u!114 &2051259746935990872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,16 +74,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1354693813965960194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18e1e1cbd437b8641b97b243db534b18, type: 3}
+  m_Script: {fileID: 11500000, guid: 90a8578ef821c244a92c0c23e38c4801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4592762257819642038, guid: 92783088b403a28468d38836fdfacdcc, type: 3}
-  waitingTime: 0
-  spawnRate: 4
-  spawnNumber: 8
-  rngX: 0
-  rngZ: 0
-  isBoss: 0
+  spawnRate: 3
 --- !u!1 &2345942642444124324
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,13 +120,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2345942642444124324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18e1e1cbd437b8641b97b243db534b18, type: 3}
+  m_Script: {fileID: 11500000, guid: 90a8578ef821c244a92c0c23e38c4801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4592762257819642038, guid: 92783088b403a28468d38836fdfacdcc, type: 3}
-  waitingTime: 2
-  spawnRate: 4
-  spawnNumber: 8
-  rngX: 0
-  rngZ: 0
-  isBoss: 0
+  spawnRate: 3

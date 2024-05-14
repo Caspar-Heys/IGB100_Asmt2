@@ -8,12 +8,12 @@ public class DoorEntry : MonoBehaviour, IInteractable
     public GameObject DoorUI;
     public void Interact()
     {
+        Cursor.lockState = CursorLockMode.None;
         DoorUI.SetActive(true);
         GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
-        //GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = false;
-        GameObject.FindWithTag("Player").GetComponentInChildren<ShotGun>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
     }
     // Start is called before the first frame update
     void Start()
@@ -40,8 +40,7 @@ public class DoorEntry : MonoBehaviour, IInteractable
         GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = true;
-        //GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = true;
-        GameObject.FindWithTag("Player").GetComponentInChildren<ShotGun>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 }

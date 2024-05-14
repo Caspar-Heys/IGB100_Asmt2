@@ -96,8 +96,8 @@ public class GameManager : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
         GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = false;
-        Destroy(level01);
-        player.SetActive(false);
+        GameObject.FindWithTag("Player").GetComponentInChildren<ShotGun>().enabled = false;
+        //Destroy(level01);
         player.SetActive(false);
         if (win)
         {

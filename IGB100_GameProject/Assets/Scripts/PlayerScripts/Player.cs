@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
@@ -9,9 +10,12 @@ public class Player : MonoBehaviour {
     public float maxHealth;
     public float killIntention;
     public float maxKillIntention;
+    public float ShotGunFireRate;
+    public float GrimbrandFireRate;
     public int ultimateSkillID = 1;
-    private string ultimateSkillName = "Heal";
+    public string ultimateSkillName;
     public GameObject mainCamera;
+    public GameObject EnemyBullet;
     public GameObject[] weapons;
 
     private float teleportTimer = 0.0f; // do not delete this
@@ -21,6 +25,8 @@ public class Player : MonoBehaviour {
     
     // Use this for initialization
     void Start () {
+        if (ultimateSkillID == 1) { ultimateSkillName = "Heal"; }
+        else if (ultimateSkillID == 2) { ultimateSkillName = "Adrenaline Surge"; }
         uiController.GetComponent<UIController>().UpdateHpBar(health, maxHealth);
         uiController.GetComponent<UIController>().UpdateKillIntentionBar(killIntention, maxKillIntention, ultimateSkillName);
     }
@@ -28,9 +34,12 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         TeleportCountDown();
-        if (!GameManager.instance.menu && !GameManager.instance.pause && Input.GetKey("f"))
+        if (!GameManager.instance.menu && !GameManager.instance.pause)
         {
-            UseUltimateSkill();
+            if (Input.GetKeyDown("f"))
+            {
+                UseUltimateSkill();
+            }
         }
     }
 
@@ -63,6 +72,7 @@ public class Player : MonoBehaviour {
         uiController.GetComponent<UIController>().UpdateKillIntentionBar(killIntention, maxKillIntention, ultimateSkillName);
         
     }
+
 
     public void UseUltimateSkill()
     {
@@ -97,6 +107,18 @@ public class Player : MonoBehaviour {
         }
         uiController.GetComponent<UIController>().UpdateHpBar(health, maxHealth);
         uiController.GetComponent<UIController>().UpdateKillIntentionBar(killIntention, maxKillIntention, ultimateSkillName);
+    }
+    public void USkill_AdrenalineSurge()
+    {
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            enemy.GetComponent<NavMeshAgent>().speed /= 2;
+        }
+        foreach (GameObject projectile in GameObject.FindGameObjectsWithTag("EnemyBullet"))
+        {
+            projectile.GetComponent<EnemyBulletRed>().moveSpeed /= 2;
+        }
+        EnemyBullet.GetComponent<EnemyBulletRed>().moveSpeed /= 2;
     }
 
     public void ChangeSkill(int ID, string name)
