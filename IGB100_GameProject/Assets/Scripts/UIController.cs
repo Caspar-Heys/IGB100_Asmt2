@@ -19,6 +19,7 @@ public class UIController : MonoBehaviour
     public TMP_Text kiTxt;
     public GameObject pressF;
     public TMP_Text magazineTxt;
+    public TMP_Text weaponTxt;
 
     public GameObject pauseUI;
     public GameObject winUI;
@@ -135,6 +136,7 @@ public class UIController : MonoBehaviour
     }
     public void UpdateMagazineBar(float magazing, float maxMagazing, bool reloading)
     {
+        magazineTxt.color = Color.white;
         magazineBar.value = magazing / maxMagazing;
         if (reloading)
         {
@@ -144,7 +146,8 @@ public class UIController : MonoBehaviour
         {
             if (magazing == 0)
             {
-                magazineTxt.text = "Press R to Reload!";
+                magazineTxt.text = "RELOAD";
+                magazineTxt.color = Color.red;
             }
             else
             {
@@ -152,6 +155,11 @@ public class UIController : MonoBehaviour
             }
             
         }
+    }
+
+    public void UpdateWeaponTxt(string weapon) 
+    { 
+        weaponTxt.text = weapon;
     }
     public void ShowBossUI()
     {

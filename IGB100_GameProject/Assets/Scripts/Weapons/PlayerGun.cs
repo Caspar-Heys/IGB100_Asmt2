@@ -205,15 +205,18 @@ public class PlayerGun : MonoBehaviour
         {
             weaponMode++;
             uiController.GetComponent<UIController>().UpdateMagazineBar(ShotGunmagazine, ShotGunmaxMagazine, ShotGunreloading);
+            uiController.GetComponent<UIController>().UpdateWeaponTxt("ShotGun");
         }
         else if (weaponMode == 2)
         {
             weaponMode++;
+            uiController.GetComponent<UIController>().UpdateWeaponTxt("RPG");
         }
         else 
         { 
             weaponMode = 1;
             uiController.GetComponent<UIController>().UpdateMagazineBar(Riflemagazine, RiflemaxMagazine, Riflereloading);
+            uiController.GetComponent<UIController>().UpdateWeaponTxt("Rifle");
         }
     }
 }
