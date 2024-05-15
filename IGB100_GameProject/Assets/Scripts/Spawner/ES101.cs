@@ -12,7 +12,6 @@ public class ES101 : MonoBehaviour
     public float rngX = 0.0f;
     public float rngZ = 0.0f;
     public bool isBoss = false;
-    
 
     // Start is called before the first frame update
     void Start()
