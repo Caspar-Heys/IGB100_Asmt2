@@ -87,10 +87,10 @@ public class Enemy : MonoBehaviour {
             GameManager.instance.UpdateBossHpBar(health, healthMax);
         }
     }
-    private void OnTriggerStay(Collider otherObject) {
+    private void OnCollisionStay(Collision collision) {
 
-        if (otherObject.transform.tag == "Player" && Time.time > damageTimer) {
-            otherObject.GetComponent<Player>().TakeDamage(hitDamage);
+        if (collision.transform.tag == "Player" && Time.time > damageTimer) {
+            collision.gameObject.GetComponent<Player>().TakeDamage(hitDamage);
             damageTimer = Time.time + damageRate;
         }
     }
