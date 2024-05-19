@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4592762257819642038, guid: 92783088b403a28468d38836fdfacdcc, type: 3}
-  waitingTime: 0
+  waitingTime: 2
   spawnRate: 4
-  spawnNumber: 9
+  spawnNumber: 4
   rngX: 0
   rngZ: 0
   isBoss: 0
@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2905702306493850662, guid: 5320ba136369b5b46a70fb05f874cb9e, type: 3}
-  waitingTime: 5
-  spawnRate: 4
-  spawnNumber: 6
+  waitingTime: 4
+  spawnRate: 5
+  spawnNumber: 4
   rngX: 0
   rngZ: 0
   isBoss: 0
@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4592762257819642038, guid: 92783088b403a28468d38836fdfacdcc, type: 3}
-  waitingTime: 2
+  waitingTime: 0
   spawnRate: 4
-  spawnNumber: 9
+  spawnNumber: 4
   rngX: 0
   rngZ: 0
   isBoss: 0
@@ -183,8 +183,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6611412269307839969}
   - {fileID: 6782458159350876940}
+  - {fileID: 6611412269307839969}
   - {fileID: 4077142664216078866}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

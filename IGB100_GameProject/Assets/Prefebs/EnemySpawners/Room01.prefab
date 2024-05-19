@@ -29,8 +29,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5757032885873541833}
   - {fileID: 3621285990567868905}
+  - {fileID: 5757032885873541833}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1354693813965960194
@@ -80,7 +80,7 @@ MonoBehaviour:
   enemy: {fileID: 4592762257819642038, guid: 92783088b403a28468d38836fdfacdcc, type: 3}
   waitingTime: 0
   spawnRate: 4
-  spawnNumber: 8
+  spawnNumber: 5
   rngX: 0
   rngZ: 0
   isBoss: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   enemy: {fileID: 4592762257819642038, guid: 92783088b403a28468d38836fdfacdcc, type: 3}
   waitingTime: 2
   spawnRate: 4
-  spawnNumber: 8
+  spawnNumber: 5
   rngX: 0
   rngZ: 0
   isBoss: 0
