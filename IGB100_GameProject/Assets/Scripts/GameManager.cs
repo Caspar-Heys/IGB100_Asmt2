@@ -26,14 +26,16 @@ public class GameManager : MonoBehaviour
 
     public int roomMax = 3; // Start counting from 1
     public int currentRoom = 0; // Start counting from 0
+    private int difficulty = 0;
     public int[] totalEnemyInEachRoom;
+    public int[] totalEnemyInEachRoomHard;
     private int currentEnemyCount = 0;
     public Transform[] teleportPointInRooms;
     public Transform teleportPointInLounge;
     public GameObject door;
 
     public GameObject[] enemySpawnerInEachRoom;
-    //public GameObject enemySpawnerInBossRoom;
+    public GameObject[] enemySpawnerInEachRoomHard;
     public GameObject roof;
 
     public int token = 0;
@@ -172,14 +174,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void TeleportToRoom() // and start fight
+    public void TeleportToRoom() // and start fighting
     {
         startTime = Time.time;
         isRoomClear = false;
         Cursor.lockState = CursorLockMode.Locked;
-
-        currentEnemyCount = totalEnemyInEachRoom[currentRoom];
-        enemySpawner = Instantiate(enemySpawnerInEachRoom[currentRoom], transform.position, transform.rotation);
+        switch (difficulty)
+        {
+            case 0:
+                currentEnemyCount = totalEnemyInEachRoom[currentRoom];
+                enemySpawner = Instantiate(enemySpawnerInEachRoom[currentRoom], transform.position, transform.rotation);
+                break;
+            case 1:
+                currentEnemyCount = totalEnemyInEachRoomHard[currentRoom];
+                enemySpawner = Instantiate(enemySpawnerInEachRoomHard[currentRoom], transform.position, transform.rotation);
+                break;
+            default:
+                Debug.Log("Ivalid difficulty.");
+                break;
+        }
+        
         player.GetComponent<Player>().Teleport(teleportPointInRooms[currentRoom]);
 
     }

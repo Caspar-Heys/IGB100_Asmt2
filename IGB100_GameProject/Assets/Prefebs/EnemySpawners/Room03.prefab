@@ -99,7 +99,7 @@ MonoBehaviour:
   enemy: {fileID: 4592762257819642038, guid: 92783088b403a28468d38836fdfacdcc, type: 3}
   waitingTime: 2
   spawnRate: 5
-  spawnNumber: 4
+  spawnNumber: 3
   rngX: 0
   rngZ: 0
   isBoss: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   enemy: {fileID: 4592762257819642038, guid: 92783088b403a28468d38836fdfacdcc, type: 3}
   waitingTime: 0
   spawnRate: 5
-  spawnNumber: 4
+  spawnNumber: 3
   rngX: 0
   rngZ: 0
   isBoss: 0
