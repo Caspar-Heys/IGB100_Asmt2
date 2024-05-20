@@ -299,8 +299,8 @@ MonoBehaviour:
   healthMax: 2500
   hitDamage: 0
   killIntention: 10
-  token: 1
-  score: 100
+  token: 30
+  score: 5000
   isBoss: 1
   thisRenderer: {fileID: 1174629631627126526}
   deathEffect: {fileID: 159918, guid: a0040bf7072bc2f4e82d887d50a9c5e2, type: 3}

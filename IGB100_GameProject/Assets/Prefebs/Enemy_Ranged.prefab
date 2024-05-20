@@ -290,7 +290,7 @@ MonoBehaviour:
   healthMax: 100
   hitDamage: 5
   killIntention: 10
-  token: 1
+  token: 2
   score: 100
   isBoss: 0
   thisRenderer: {fileID: 2470274774248324037}
