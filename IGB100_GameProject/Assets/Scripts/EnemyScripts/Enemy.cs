@@ -67,11 +67,7 @@ public class Enemy : MonoBehaviour {
                 GameManager.instance.win = true;
                 GameManager.instance.GameOver();
             }
-            Instantiate(deathEffect, transform.position, transform.rotation);
-            GameManager.instance.token += token;
-            GameManager.instance.score += score;
-            GameManager.instance.player.GetComponent<Player>().AddKillIntention(killIntention);
-            GameManager.instance.ReduceEnemyCount(1);
+            
             Destroy(this.gameObject);
         }
     }
@@ -165,5 +161,14 @@ public class Enemy : MonoBehaviour {
         {
             return false;
         }
+    }
+
+    void OnDestroy()
+    {
+        Instantiate(deathEffect, transform.position, transform.rotation);
+        GameManager.instance.token += token;
+        GameManager.instance.score += score;
+        GameManager.instance.player.GetComponent<Player>().AddKillIntention(killIntention);
+        GameManager.instance.ReduceEnemyCount(1);
     }
 }
