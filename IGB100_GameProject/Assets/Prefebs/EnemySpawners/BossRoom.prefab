@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7158283221541080332}
-  - component: {fileID: 3452834765063866783}
+  - component: {fileID: 8618911023770027431}
   m_Layer: 0
   m_Name: Healer
   m_TagString: Untagged
@@ -116,7 +116,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1798028495461635977}
   m_LocalEulerAnglesHint: {x: 0, y: 101.566, z: 0}
---- !u!114 &3452834765063866783
+--- !u!114 &8618911023770027431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,13 +125,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8144310077134798974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c65436b78e33046a04667c94494091, type: 3}
+  m_Script: {fileID: 11500000, guid: ba0798cbf666daa43a8659bdbdf5a631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5451725621685859990, guid: abb63a04a19e8b04cbd39236aa3fa31f, type: 3}
   waitingTime: 5
   spawnRate: 10
-  spawnNumber: 10
+  spawnNumber: 20
   rngX: 0
   rngZ: 0
   isBoss: 0
+  maxEnemyCount: 2

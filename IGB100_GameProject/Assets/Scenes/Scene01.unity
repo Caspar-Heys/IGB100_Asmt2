@@ -22428,15 +22428,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2199315142221943858, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2199315142221943858, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2199315142221943858, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2625635372977115441, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_IsActive
@@ -22444,15 +22444,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2699370462316533772, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2699370462316533772, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2699370462316533772, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3042200315960950108, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: bossUI
@@ -22554,15 +22554,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7404611816665010156, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7404611816665010156, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7404611816665010156, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7718459637003196711, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_SizeDelta.y

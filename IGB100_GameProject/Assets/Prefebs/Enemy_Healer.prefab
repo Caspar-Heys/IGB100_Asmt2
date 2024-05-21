@@ -232,7 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitingTime: 1
   heal: 50
-  healRate: 3
+  healRate: 5
   healRange: 100
   healRound: 100
   effectHeal: {fileID: 7355591424859418038, guid: 2aca54b07a989ba409a7881e368afff7, type: 3}
