@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: f8cccea9160e52d4d85163a0f0f509f4, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -9004,6 +9004,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1153508189126953666, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1153508189126953666, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1153508189126953666, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 1350401755151515756, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -9040,6 +9052,18 @@ PrefabInstance:
       propertyPath: fireSoundEmpty
       value: 
       objectReference: {fileID: 2196845353736389163, guid: abd34d6190e95834b929de64b070ce66, type: 3}
+    - target: {fileID: 4477548875954229947, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477548875954229947, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477548875954229947, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4484450575768329675, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
       propertyPath: m_Name
       value: PlayerCamera
@@ -9072,6 +9096,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7683536980649433712, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: playerUI
+      value: 
+      objectReference: {fileID: 711650923}
     - target: {fileID: 7683536980649433712, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
       propertyPath: uiController
       value: 
@@ -9145,6 +9173,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8690839105442432095, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: muzzle
+      value: 
+      objectReference: {fileID: 898724534}
+    - target: {fileID: 8690839105442432095, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: Rifledmg
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690839105442432095, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
       propertyPath: reloadSound
       value: 
       objectReference: {fileID: 663448108061736200, guid: 371aa8b401b4b5249bb22cf706dce5d2, type: 3}
@@ -9153,9 +9189,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4742240686405454755}
     - target: {fileID: 8690839105442432095, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: Enemies.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690839105442432095, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
       propertyPath: fireSoundEmpty
       value: 
       objectReference: {fileID: 2196845353736389163, guid: abd34d6190e95834b929de64b070ce66, type: 3}
+    - target: {fileID: 8690839105442432095, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: ShotGunfireRate
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967270492876534182, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: playerUI
+      value: 
+      objectReference: {fileID: 711650923}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1350401755151515756, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
@@ -9169,6 +9217,11 @@ PrefabInstance:
       addedObject: {fileID: 724554684}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+--- !u!1 &898724534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6794620782846584430, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+  m_PrefabInstance: {fileID: 898724533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &904633237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9599,6 +9652,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d7e653c9fbf54084dbcc79ed51161030, type: 3}
       propertyPath: m_Name
       value: Corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d7e653c9fbf54084dbcc79ed51161030, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16926,7 +16983,6 @@ MonoBehaviour:
   - {fileID: 4401926347788088235, guid: 18dc1bbb61408fe4e9119c19b5563644, type: 3}
   - {fileID: 3248443305789937316, guid: 1b0773de6fcfdcf40b959cc5816e7a1f, type: 3}
   roof: {fileID: 909105748}
-  token: 0
   score: 0
 --- !u!4 &1677001861
 Transform:

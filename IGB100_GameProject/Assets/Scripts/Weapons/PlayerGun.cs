@@ -42,6 +42,8 @@ public class PlayerGun : MonoBehaviour
     public float RPGreloadCD;
     private float RPGreloadTimer;
     public bool RPGreloading = false;
+    [SerializeField] private GameObject RPGprojectile;
+
 
 
     //------------------------------------------------Other
@@ -49,6 +51,7 @@ public class PlayerGun : MonoBehaviour
     public GameObject bulletHit;
     public GameObject muzzle;
     public GameObject raycastTarget;
+    [SerializeField] LayerMask Enemies;
 
     //------------------------------------------------audio
     public GameObject fireSound;
@@ -111,7 +114,7 @@ public class PlayerGun : MonoBehaviour
         }
         else if(weaponMode == 2)
         {
-            if (Input.GetMouseButtonDown(0) && Time.time > ShotGunfireTimer && !ShotGunreloading)
+            if (Input.GetMouseButton(0) && Time.time > ShotGunfireTimer && !ShotGunreloading)
             {
                 if (ShotGunmagazine > 0) // fire
                 {
@@ -145,6 +148,28 @@ public class PlayerGun : MonoBehaviour
                     Instantiate(fireSoundEmpty, transform.position, transform.rotation);
                     ShotGunfireTimer = Time.time + ShotGunfireRate;
                     uiController.GetComponent<UIController>().UpdateMagazineBar(ShotGunmagazine, ShotGunmaxMagazine, ShotGunreloading);
+                }
+            }
+        }
+        else if(weaponMode == 3)
+        {
+            if(Input.GetMouseButtonDown(0) && Time.time > RPGfireTimer && !RPGreloading)
+            {
+                if(RPGmagazine > 0)
+                {
+                    Instantiate(fireSound, transform.position, transform.rotation);
+                    Instantiate(muzzleFlash, muzzle.transform.position, muzzle.transform.rotation);
+                    animation.Play("Fire");
+                    Instantiate(RPGprojectile, muzzle.transform.position, muzzle.transform.rotation);
+                    RPGmagazine--;
+                    uiController.GetComponent<UIController>().UpdateMagazineBar(RPGmagazine, RPGmaxMagazine, RPGreloading);
+                    RPGfireTimer = Time.time + RPGfireRate;
+                }
+                else
+                {
+                    Instantiate(fireSoundEmpty, transform.position, transform.rotation);
+                    uiController.GetComponent<UIController>().UpdateMagazineBar(RPGmagazine, RPGmaxMagazine, RPGreloading);
+                    RPGfireTimer = Time.time + RPGfireRate;
                 }
             }
         }
@@ -197,6 +222,25 @@ public class PlayerGun : MonoBehaviour
 
             }
         }
+        else if(weaponMode == 3)
+        {
+            if(Input.GetKey("r") && RPGmagazine != RPGmaxMagazine && !RPGreloading)
+            {
+                RPGreloading = true;
+                RPGreloadTimer = Time.time;
+                uiController.GetComponent<UIController>().UpdateMagazineBar(RPGmagazine, RPGmaxMagazine, RPGreloading);
+                Instantiate(reloadSound, transform.position, transform.rotation);
+            }
+            if (RPGreloading)
+            {
+                if(Time.time > RPGreloadTimer + RPGreloadCD) 
+                {
+                    RPGmagazine = RPGmaxMagazine;
+                    RPGreloading = false;
+                    uiController.GetComponent<UIController>().UpdateMagazineBar(RPGmagazine, RPGmaxMagazine, RPGreloading);
+                }
+            }
+        }
     }
 
     private void SwitchWeaponMode()
@@ -210,6 +254,7 @@ public class PlayerGun : MonoBehaviour
         else if (weaponMode == 2)
         {
             weaponMode++;
+            uiController.GetComponent<UIController>().UpdateMagazineBar(RPGmagazine, RPGmaxMagazine, RPGreloading);
             uiController.GetComponent<UIController>().UpdateWeaponTxt("RPG");
         }
         else 
@@ -217,6 +262,18 @@ public class PlayerGun : MonoBehaviour
             weaponMode = 1;
             uiController.GetComponent<UIController>().UpdateMagazineBar(Riflemagazine, RiflemaxMagazine, Riflereloading);
             uiController.GetComponent<UIController>().UpdateWeaponTxt("Rifle");
+        }
+    }
+
+    public void CheckForDestructibles(Transform transform) //For RPG
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 4f, Enemies);
+        foreach(Collider c in colliders)
+        {
+            if(c.tag == "Enemy")
+            {
+                c.GetComponent<Enemy>().TakeDamage(RPGdmg);
+            }
         }
     }
 }

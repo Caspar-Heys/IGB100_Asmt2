@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class LobbyManager : MonoBehaviour
 {
-    private int tokens = 0;
 
     // Start is called before the first frame update
     void Start()

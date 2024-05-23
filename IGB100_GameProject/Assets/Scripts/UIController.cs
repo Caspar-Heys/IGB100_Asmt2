@@ -20,6 +20,7 @@ public class UIController : MonoBehaviour
     public GameObject pressF;
     public TMP_Text magazineTxt;
     public TMP_Text weaponTxt;
+    public TMP_Text TokensTxt;
 
     public GameObject pauseUI;
     public GameObject winUI;
@@ -37,6 +38,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         ShowPlayerUI();
+        UpdateTokens(GameObject.FindWithTag("Player").GetComponent<Player>().tokens);
     }
 
     // Update is called once per frame
@@ -77,6 +79,7 @@ public class UIController : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0.0f;
+        Debug.Log("Paused");
         //GameManager.instance.pause = true;
         pauseUI.SetActive(true);
         playerUI.SetActive(false);
@@ -85,6 +88,7 @@ public class UIController : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
         GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = false;
         GameObject.FindWithTag("Player").GetComponentInChildren<ShotGun>().enabled = false;
     }
@@ -98,8 +102,7 @@ public class UIController : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = true;
-        GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = true;
-        GameObject.FindWithTag("Player").GetComponentInChildren<ShotGun>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = true;
     }
     public void ShowWinUI()
     {
@@ -113,7 +116,10 @@ public class UIController : MonoBehaviour
         bossUI.SetActive(false);
         loseUI.SetActive(true);
     }
-
+    public void UpdateTokens(int tokens)
+    {
+        TokensTxt.text = "Tokens:" + tokens;
+    }
     public void UpdateHpBar(float hp, float maxHp)
     {
         healthBar.value = hp / maxHp;

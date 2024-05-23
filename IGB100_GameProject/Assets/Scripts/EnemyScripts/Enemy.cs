@@ -166,7 +166,7 @@ public class Enemy : MonoBehaviour {
     void OnDestroy()
     {
         Instantiate(deathEffect, transform.position, transform.rotation);
-        GameManager.instance.token += token;
+        GameManager.instance.player.GetComponent<Player>().tokens += token;
         GameManager.instance.score += score;
         GameManager.instance.player.GetComponent<Player>().AddKillIntention(killIntention);
         GameManager.instance.ReduceEnemyCount(1);

@@ -30,12 +30,11 @@ public class ShopUI : MonoBehaviour
     public void BuyItem()
     {
         int itemPrice = gameObject.GetComponent<ItemAttributes>().price;
-        if(GameManager.GetComponent<GameManager>().token >= itemPrice)
+        if (GameObject.FindWithTag("Player").GetComponent<Player>().tokens >= itemPrice)
         {
-
             //Add item to player inventory, subtract cost from tokens, play purchase audio
             Destroy(gameObject);
-            GameManager.GetComponent<GameManager>().token -= itemPrice;
+            GameObject.FindWithTag("Player").GetComponent<Player>().tokens -= itemPrice;
         }
 
         else

@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemySpawnerInEachRoomHard;
     public GameObject roof;
 
-    public int token = 0;
     public int score = 0;
     
     //private float pauseDelay = 0.5f;
@@ -97,10 +96,7 @@ public class GameManager : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
-        GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = false;
-        GameObject.FindWithTag("Player").GetComponentInChildren<ShotGun>().enabled = false;
-        //Destroy(level01);
-        player.SetActive(false);
+        GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
         if (win)
         {
             uiController.GetComponent<UIController>().ShowWinUI();
@@ -156,12 +152,16 @@ public class GameManager : MonoBehaviour
                 currentRoom = roomMax - 1;
             }
             uiController.GetComponent<UIController>().ShowRoomClearUI();
+            GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
+            GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
+            GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
+            GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
         } 
     }
 
     public void TeleportToLounge()
     {
-        player.GetComponent<Player>().Teleport(teleportPointInLounge);
+        player.GetComponent<Player>().Teleport(teleportPointInLounge.transform);
         //player.transform.position = teleportPointInLounge.position;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -190,7 +190,7 @@ public class GameManager : MonoBehaviour
                 enemySpawner = Instantiate(enemySpawnerInEachRoomHard[currentRoom], transform.position, transform.rotation);
                 break;
             default:
-                Debug.Log("Ivalid difficulty.");
+                Debug.Log("Invalid difficulty.");
                 break;
         }
         

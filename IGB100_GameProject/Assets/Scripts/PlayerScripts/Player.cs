@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
@@ -17,11 +19,13 @@ public class Player : MonoBehaviour {
     public GameObject mainCamera;
     public GameObject EnemyBullet;
     public GameObject[] weapons;
+    public int tokens;
 
     private float teleportTimer = 0.0f; // do not delete this
-
+    private string currentScene;
     //UI Elements
     public GameObject uiController;
+    [SerializeField] private GameObject playerUI;
     
     // Use this for initialization
     void Start () {
@@ -29,18 +33,26 @@ public class Player : MonoBehaviour {
         else if (ultimateSkillID == 2) { ultimateSkillName = "Adrenaline Surge"; }
         uiController.GetComponent<UIController>().UpdateHpBar(health, maxHealth);
         uiController.GetComponent<UIController>().UpdateKillIntentionBar(killIntention, maxKillIntention, ultimateSkillName);
+        if (SceneManager.GetActiveScene().name == "Lounge")
+        {
+
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
         TeleportCountDown();
-        if (!GameManager.instance.menu && !GameManager.instance.pause)
+        if (playerUI.activeInHierarchy)
         {
             if (Input.GetKeyDown("f"))
             {
                 UseUltimateSkill();
             }
         }
+    }
+    void OnUpdate(string sceneName)
+    {
+
     }
 
     public void TakeDamage(float dmg) {
@@ -133,6 +145,10 @@ public class Player : MonoBehaviour {
         Debug.Log("teleported");
         transform.position = t.position;
         GetComponent<PlayerLook>().SetRotation(t);
+        GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = true;
     }
 
     public void TeleportCountDown()

@@ -5,9 +5,10 @@ using UnityEngine;
 public interface IConsumable { public void UsePotion(); }
 public class UsePotion : MonoBehaviour
 {
+    [SerializeField] private GameObject playerUI;
     private void Update()
     {
-        if(!GameManager.instance.menu && !GameManager.instance.pause)
+        if(playerUI.activeInHierarchy)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {

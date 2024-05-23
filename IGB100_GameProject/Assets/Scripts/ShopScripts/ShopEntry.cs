@@ -13,7 +13,7 @@ public class ShopEntry : MonoBehaviour, IInteractable
         GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
-        GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
 
     }
     private void Start()
@@ -36,7 +36,7 @@ public class ShopEntry : MonoBehaviour, IInteractable
         GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = true;
-        GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = true;
+        GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
