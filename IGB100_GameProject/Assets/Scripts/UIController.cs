@@ -44,9 +44,13 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerUI.activeInHierarchy && (Input.GetKeyDown("p")|| Input.GetKeyDown("escape")))
+
+        if (playerUI.activeInHierarchy)
         {
-            PauseGame();
+            if (Input.GetKeyDown("p") || Input.GetKeyDown("escape"))
+            {
+                PauseGame();
+            }
             // show pause ui and cursor
         }
         else if(pauseUI.activeInHierarchy && (Input.GetKeyDown("p")|| Input.GetKeyDown("escape")))
@@ -89,8 +93,6 @@ public class UIController : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
         GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
-        GameObject.FindWithTag("Player").GetComponentInChildren<Grimbrand>().enabled = false;
-        GameObject.FindWithTag("Player").GetComponentInChildren<ShotGun>().enabled = false;
     }
     public void UnPauseGame()
     {
