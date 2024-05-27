@@ -25,6 +25,8 @@ public class ShootString : MonoBehaviour
     public GameObject enemybulletPlus;
     private GameObject player;
     public GameObject muzzle;
+    public GameObject muzzleEffect;
+    public GameObject fireSound;
 
     // Start is called before the first frame update
     void Start()
@@ -56,11 +58,16 @@ public class ShootString : MonoBehaviour
                 if (GetComponent<Enemy>().CheckIsSupported()) 
                 {
                     GameObject tempBullet = Instantiate(enemybulletPlus, muzzle.transform.position, muzzle.transform.rotation);
-                    tempBullet.GetComponent<EnemyBulletRed>().SetSpeed(bulletSpeedPlus - i * bulletSpeedDown);                }
+                    tempBullet.GetComponent<EnemyBulletRed>().SetSpeed(bulletSpeedPlus - i * bulletSpeedDown);
+                    Instantiate(muzzleEffect, muzzle.transform.position, muzzle.transform.rotation);
+                    Instantiate(fireSound, muzzle.transform.position, muzzle.transform.rotation);
+                }
                 else
                 {
                     GameObject tempBullet = Instantiate(enemybullet, muzzle.transform.position, muzzle.transform.rotation);
                     tempBullet.GetComponent<EnemyBulletRed>().SetSpeed(bulletSpeed - i * bulletSpeedDown);
+                    Instantiate(muzzleEffect, muzzle.transform.position, muzzle.transform.rotation);
+                    Instantiate(fireSound, muzzle.transform.position, muzzle.transform.rotation);
                 }    
                 
             }

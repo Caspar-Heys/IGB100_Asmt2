@@ -34,7 +34,7 @@ public class EnemyBulletGreen : MonoBehaviour
 
     private void Movement()
     {
-        transform.LookAt(target.transform.position + new Vector3(0, 1, 0));
+        transform.LookAt(target.transform.position + new Vector3(0, 2, 0));
         transform.position += moveSpeed * Time.deltaTime * transform.forward;
     }
 

@@ -1196,6 +1196,8 @@ MonoBehaviour:
   shootSpreadAngle: 10
   shootSpreadNumber: 7
   bulletSpeed: 8
+  muzzleEffect: {fileID: 4493765536514330118, guid: a92027a88f5b1414db07df8c5fea2863, type: 3}
+  fireSound: {fileID: 6698515458232812333, guid: cec19e9b5abb7fd45a124692d2073359, type: 3}
   speed: 16
   chargeSpeed: 24
   jumpHeight: 8

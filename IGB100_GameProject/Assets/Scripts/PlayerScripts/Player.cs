@@ -28,7 +28,9 @@ public class Player : MonoBehaviour {
     [SerializeField] private GameObject playerUI;
 
     public GameObject effectHeal;
-    
+    public GameObject roomFightBGM;
+    public GameObject bossFightBGM;
+
     // Use this for initialization
     void Start () {
         if (ultimateSkillID == 1) { ultimateSkillName = "Heal"; }
@@ -172,5 +174,22 @@ public class Player : MonoBehaviour {
     public float GetTeleportTimer()
     {
         return teleportTimer;
+    }
+
+    public void SetBGM(string s)
+    {
+        switch (s)
+        {
+            case "roomFight":
+                roomFightBGM.SetActive(true);
+                bossFightBGM.SetActive(false);
+                break;
+            case "bossFight":
+                roomFightBGM.SetActive(false);
+                bossFightBGM.SetActive(true);
+                break;
+            default:
+                break;
+        }
     }
 }

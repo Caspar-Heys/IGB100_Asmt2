@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("game start");
         TeleportToRoom();
         player.GetComponent<Player>().health = 100;
+        player.GetComponent<Player>().SetBGM("roomFight");
         gameOver = false;
         win = false;
         roof.SetActive(true);
@@ -195,6 +196,12 @@ public class GameManager : MonoBehaviour
         }
         
         player.GetComponent<Player>().Teleport(teleportPointInRooms[currentRoom]);
-
+        if (currentRoom == roomMax -1) {
+            player.GetComponent<Player>().SetBGM("bossFight");
+        }
+        else
+        {
+            player.GetComponent<Player>().SetBGM("roomFight");
+        }
     }
 }

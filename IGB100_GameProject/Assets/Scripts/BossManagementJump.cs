@@ -30,6 +30,8 @@ public class BossManagementJump : MonoBehaviour
     private int subNumber;
     public float bulletSpeed = 10.0f;
     private bool isLeftMuzzle = true;
+    public GameObject muzzleEffect;
+    public GameObject fireSound;
 
     // for stage 2
     private bool locked = false;
@@ -159,6 +161,8 @@ public class BossManagementJump : MonoBehaviour
                 }
                 muzzle.transform.LookAt(player.transform.position);
                 rotation = muzzle.transform.rotation;
+                Instantiate(muzzleEffect, muzzle.transform.position, muzzle.transform.rotation);
+                Instantiate(fireSound, muzzle.transform.position, muzzle.transform.rotation);
                 for (int j = 0; j < subNumber; j++)
                 {
                     GameObject enemyBullet = Instantiate(bossBullet, muzzle.transform.position, rotation * Quaternion.Euler(0f, shootSpreadAngle * (-subNumber + 1 + j * 2), 0f));

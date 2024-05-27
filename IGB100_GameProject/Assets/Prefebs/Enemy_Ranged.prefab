@@ -374,6 +374,8 @@ MonoBehaviour:
   enemybullet: {fileID: 73295874713200220, guid: 9257578efd5f60949ba87efbf627ab8c, type: 3}
   enemybulletPlus: {fileID: 73295874713200220, guid: 2158cdb297350c14f846697e33d9938e, type: 3}
   muzzle: {fileID: 664897562146820210}
+  muzzleEffect: {fileID: 4493765536514330118, guid: a92027a88f5b1414db07df8c5fea2863, type: 3}
+  fireSound: {fileID: 6698515458232812333, guid: cec19e9b5abb7fd45a124692d2073359, type: 3}
 --- !u!1001 &2833380717009384006
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3465,6 +3465,134 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 613069524141688410, guid: cd9b0275f1dae5c4caf50b09b321b4cf, type: 3}
   m_PrefabInstance: {fileID: 1038775889}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &265858310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265858311}
+  - component: {fileID: 265858312}
+  m_Layer: 0
+  m_Name: BgmBossFight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &265858311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265858310}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1663979040}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &265858312
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265858310}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dad70f2b6aabb864097699978a8810c0, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.273
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &266623312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7368,7 +7496,7 @@ GameObject:
   - component: {fileID: 724554684}
   - component: {fileID: 724554685}
   m_Layer: 0
-  m_Name: Bgm
+  m_Name: BgmRoomFight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7399,9 +7527,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 901c93506cceadb46aa378bc5b2dd292, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 27d48a77eeddf8a468b5a4daebe0f65a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.261
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9105,6 +9233,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7355591424859418038, guid: 2aca54b07a989ba409a7881e368afff7, type: 3}
     - target: {fileID: 7683536980649433712, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: bossFightBGM
+      value: 
+      objectReference: {fileID: 265858310}
+    - target: {fileID: 7683536980649433712, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: roomFightBGM
+      value: 
+      objectReference: {fileID: 724554683}
+    - target: {fileID: 7683536980649433712, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
       propertyPath: uiController
       value: 
       objectReference: {fileID: 4742240686405454755}
@@ -9219,6 +9355,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5571614995859025307, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 724554684}
+    - targetCorrespondingSourceObject: {fileID: 5571614995859025307, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 265858311}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
 --- !u!1 &898724534 stripped
@@ -16966,7 +17105,7 @@ MonoBehaviour:
   hasPlayed: 0
   bossFight: 0
   roomMax: 4
-  currentRoom: 1
+  currentRoom: 0
   totalEnemyInEachRoom: 0a0000000c0000000e000000e7030000
   totalEnemyInEachRoomHard: 0a000000110000001600000063000000
   teleportPointInRooms:
