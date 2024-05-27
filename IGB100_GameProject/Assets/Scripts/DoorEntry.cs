@@ -32,6 +32,12 @@ public class DoorEntry : MonoBehaviour, IInteractable
     }
     public void StartGame()//player chooses to start game
     {
+        MainManager.Instance.maxhealth = GameObject.FindWithTag("Player").GetComponent<Player>().maxHealth;
+        MainManager.Instance.CurrentSkill = GameObject.FindWithTag("Player").GetComponent<Player>().ultimateSkillName;
+        MainManager.Instance.ItemSlot1 = GameObject.FindWithTag("ActiveSkill1").name;
+        MainManager.Instance.ItemSlot2 = GameObject.FindWithTag("ActiveSkill2").name;
+        MainManager.Instance.PassiveItem = GameObject.FindWithTag("PassiveItem").name;
+        MainManager.Instance.tokens = GameObject.FindWithTag("Player").GetComponent<Player>().tokens;
         SceneManager.LoadScene("Scene01");
     }
     public void DontStartGame()//player choose not to start game{

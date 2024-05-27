@@ -18,6 +18,7 @@ TagManager:
   - ActiveSkill1
   - ActiveSkill2
   - EnemyBullet
+  - PassiveItem
   layers:
   - Default
   - TransparentFX

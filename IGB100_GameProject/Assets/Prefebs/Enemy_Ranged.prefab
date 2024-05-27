@@ -299,7 +299,7 @@ MonoBehaviour:
   token: 2
   score: 100
   isBoss: 0
-  thisRenderer: {fileID: 0}
+  thisRenderer: {fileID: 3359352654273575029}
   deathEffect: {fileID: 159918, guid: a0040bf7072bc2f4e82d887d50a9c5e2, type: 3}
 --- !u!54 &408051312485861853
 Rigidbody:
@@ -458,3 +458,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!137 &3359352654273575029 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 706187391109745203, guid: 3cdf075f6269e194a90fa32c2b35274c, type: 3}
+  m_PrefabInstance: {fileID: 2833380717009384006}
+  m_PrefabAsset: {fileID: 0}

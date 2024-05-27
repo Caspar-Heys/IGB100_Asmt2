@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ShopEntry : MonoBehaviour, IInteractable
 {
     public GameObject ShopUI;
     public GameObject playerUI;
+    public TextMeshProUGUI Tokenstxt;
     public void Interact()
     {
         ShopUI.SetActive(true);
@@ -14,22 +16,16 @@ public class ShopEntry : MonoBehaviour, IInteractable
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
         GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
         GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
+        Tokenstxt.text = "Tokens: " + GameObject.FindWithTag("Player").GetComponent<Player>().tokens;
 
     }
     private void Start()
     {
         ShopUI.SetActive(false);
     }
-    private void Update()
-    {
-        if(Input.GetKey(KeyCode.Escape))
-        {
-            if(ShopUI.activeInHierarchy)
-                ExitShop();
-        }
-    }
+
     
-    private void ExitShop()
+    public void ExitShop()
     {
         ShopUI.SetActive(false);
         playerUI.SetActive(true);

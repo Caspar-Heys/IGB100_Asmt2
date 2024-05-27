@@ -167,6 +167,7 @@ public class Enemy : MonoBehaviour {
     {
         Instantiate(deathEffect, transform.position, transform.rotation);
         GameManager.instance.player.GetComponent<Player>().tokens += token;
+        GameObject.FindWithTag("UIController").GetComponent<UIController>().UpdateTokens();
         GameManager.instance.score += score;
         GameManager.instance.player.GetComponent<Player>().AddKillIntention(killIntention);
         GameManager.instance.ReduceEnemyCount(1);

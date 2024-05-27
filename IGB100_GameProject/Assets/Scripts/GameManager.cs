@@ -91,6 +91,13 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        MainManager.Instance.maxhealth = GameObject.FindWithTag("Player").GetComponent<Player>().maxHealth;
+        MainManager.Instance.CurrentSkill = GameObject.FindWithTag("Player").GetComponent<Player>().ultimateSkillName;
+        MainManager.Instance.ItemSlot1 = GameObject.FindWithTag("ActiveSkill1").name;
+        MainManager.Instance.ItemSlot2 = GameObject.FindWithTag("ActiveSkill2").name;
+        MainManager.Instance.PassiveItem = GameObject.FindWithTag("PassiveItem").name;
+        MainManager.Instance.tokens = GameObject.FindWithTag("Player").GetComponent<Player>().tokens;
+        MainManager.Instance.Level = currentRoom;
         gameOver = true;
         Time.timeScale = 0;
         GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
@@ -99,6 +106,8 @@ public class GameManager : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
         if (win)
         {
+            MainManager.Instance.currenthealth = GameObject.FindWithTag("Player").GetComponent<Player>().health;
+            MainManager.Instance.killintention = GameObject.FindWithTag("Player").GetComponent<Player>().killIntention;
             uiController.GetComponent<UIController>().ShowWinUI();
         }
         else

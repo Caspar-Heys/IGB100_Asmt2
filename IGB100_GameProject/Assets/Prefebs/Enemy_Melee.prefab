@@ -116,6 +116,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!137 &6485400747161477707 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5421650685870399636, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
+  m_PrefabInstance: {fileID: 1242244783608562399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3710312026462229991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -306,7 +311,7 @@ MonoBehaviour:
   token: 2
   score: 100
   isBoss: 0
-  thisRenderer: {fileID: 0}
+  thisRenderer: {fileID: 6485400747161477707}
   deathEffect: {fileID: 159918, guid: a0040bf7072bc2f4e82d887d50a9c5e2, type: 3}
 --- !u!114 &2664401200889060738
 MonoBehaviour:

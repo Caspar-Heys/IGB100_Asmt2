@@ -12,23 +12,24 @@ public class Player : MonoBehaviour {
     public float maxHealth;
     public float killIntention;
     public float maxKillIntention;
-    public float ShotGunFireRate;
-    public float GrimbrandFireRate;
     public int ultimateSkillID = 1;
     public string ultimateSkillName;
     public GameObject mainCamera;
     public GameObject EnemyBullet;
-    public GameObject[] weapons;
     public int tokens;
 
     private float teleportTimer = 0.0f; // do not delete this
-    private string currentScene;
     //UI Elements
     public GameObject uiController;
     [SerializeField] private GameObject playerUI;
     
     // Use this for initialization
     void Start () {
+        health = MainManager.Instance.currenthealth;
+        maxHealth = MainManager.Instance.maxhealth;
+        killIntention = MainManager.Instance.killintention;
+        tokens = MainManager.Instance.tokens;
+
         if (ultimateSkillID == 1) { ultimateSkillName = "Heal"; }
         else if (ultimateSkillID == 2) { ultimateSkillName = "Adrenaline Surge"; }
         uiController.GetComponent<UIController>().UpdateHpBar(health, maxHealth);
@@ -49,10 +50,6 @@ public class Player : MonoBehaviour {
                 UseUltimateSkill();
             }
         }
-    }
-    void OnUpdate(string sceneName)
-    {
-
     }
 
     public void TakeDamage(float dmg) {

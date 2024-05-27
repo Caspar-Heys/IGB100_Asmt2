@@ -38,25 +38,45 @@ public class UIController : MonoBehaviour
     void Start()
     {
         ShowPlayerUI();
-        UpdateTokens(GameObject.FindWithTag("Player").GetComponent<Player>().tokens);
+        UpdateTokens();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (playerUI.activeInHierarchy)
+        if (Input.GetKeyDown("p") || Input.GetKeyDown("escape"))
         {
-            if (Input.GetKeyDown("p") || Input.GetKeyDown("escape"))
+            if (SceneManager.GetActiveScene().name == "Lounge")
             {
-                PauseGame();
+                if (pauseUI.activeInHierarchy)
+                {
+                    UnPauseGame();
+                }
+                else if (ShopUI.activeInHierarchy)
+                {
+                    GameObject.FindWithTag("Shop").GetComponent<ShopEntry>().ExitShop();
+                }
+                else if (playerUI.activeInHierarchy)
+                {
+                    PauseGame();
+                }
+            }
+
+            else {
+                if (pauseUI.activeInHierarchy)
+                {
+                    UnPauseGame();
+                }
+                else if (playerUI.activeInHierarchy)
+                {
+                    PauseGame();
+                }
             }
             // show pause ui and cursor
         }
-        else if(pauseUI.activeInHierarchy && (Input.GetKeyDown("p")|| Input.GetKeyDown("escape")))
-        {
-            UnPauseGame();
-        }
+
+
         if (Time.time > fpsDisplayTimer)
         {
             fps = Mathf.FloorToInt(1 / Time.deltaTime);
@@ -83,7 +103,6 @@ public class UIController : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0.0f;
-        Debug.Log("Paused");
         //GameManager.instance.pause = true;
         pauseUI.SetActive(true);
         playerUI.SetActive(false);
@@ -118,9 +137,9 @@ public class UIController : MonoBehaviour
         bossUI.SetActive(false);
         loseUI.SetActive(true);
     }
-    public void UpdateTokens(int tokens)
+    public void UpdateTokens()
     {
-        TokensTxt.text = "Tokens:" + tokens;
+        TokensTxt.text = "Tokens:" + GameObject.FindWithTag("Player").GetComponent<Player>().tokens;
     }
     public void UpdateHpBar(float hp, float maxHp)
     {
