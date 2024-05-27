@@ -9101,6 +9101,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 711650923}
     - target: {fileID: 7683536980649433712, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
+      propertyPath: effectHeal
+      value: 
+      objectReference: {fileID: 7355591424859418038, guid: 2aca54b07a989ba409a7881e368afff7, type: 3}
+    - target: {fileID: 7683536980649433712, guid: f186656320f0c48b7a5327b4a6111bb6, type: 3}
       propertyPath: uiController
       value: 
       objectReference: {fileID: 4742240686405454755}
@@ -16962,7 +16966,7 @@ MonoBehaviour:
   hasPlayed: 0
   bossFight: 0
   roomMax: 4
-  currentRoom: 0
+  currentRoom: 1
   totalEnemyInEachRoom: 0a0000000c0000000e000000e7030000
   totalEnemyInEachRoomHard: 0a000000110000001600000063000000
   teleportPointInRooms:

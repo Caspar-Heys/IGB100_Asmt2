@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHeal : MonoBehaviour
+public class EnemyHealSingle : MonoBehaviour
 {
     public float waitingTime = 1.0f;
     private float spawnTime = 0.0f;
 
-    public float heal = 30;
+    public float heal = 300.0f;
     public float healRate = 3.0f;
     private float healTimer = 0.0f;
     public float healRange = 10.0f;
     public int healRound = 10;
     private bool healing = false;
-    private GameObject[] targets;
+    public string targetName;
+    private GameObject target;
+    public GameObject healBullet;
     public GameObject effectHeal;
-    
+    public GameObject muzzle;
+
+
     public float healingAnimationCD = 1.0f;
     private float healingAnimationTimer;
 
@@ -23,7 +27,15 @@ public class EnemyHeal : MonoBehaviour
     void Start()
     {
         spawnTime = Time.time;
-        
+        try
+        {
+            target = GameObject.Find(targetName);
+        }
+        catch
+        {
+            target = null;
+        }
+
     }
 
     // Update is called once per frame
@@ -31,28 +43,23 @@ public class EnemyHeal : MonoBehaviour
     {
         if (Time.time - spawnTime > waitingTime && healRound > 0)
         {
-            Heal();
-        } 
+            HealSingle();
+        }
     }
 
-    private void Heal()
+    private void HealSingle()
     {
         if (Time.time > healTimer)
         {
             healingAnimationTimer = Time.time;
             healing = true;
             GetComponent<Enemy>().SetFiring(true);
-            targets = GameObject.FindGameObjectsWithTag("Enemy");
-            foreach (GameObject target in targets)
-            {
-                if (Vector3.Distance(target.transform.position, transform.position) < healRange)
-                {
-                    //transform.LookAt(target.transform.position);
-                    target.GetComponent<Enemy>().AddHp(heal);
-                    GameObject tempHeal = Instantiate(effectHeal, target.transform.position, target.transform.rotation);
-                    tempHeal.GetComponent<EffectOnObject>().SetTarget(target);
-                } 
-            }
+        
+            transform.LookAt(target.transform.position);
+            Instantiate(healBullet, muzzle.transform.position, muzzle.transform.rotation);
+            //GameObject tempHeal = Instantiate(effectHeal, transform.position, transform.rotation);
+            //tempHeal.GetComponent<EffectOnObject>().SetTarget(this.gameObject);
+                
             healTimer = Time.time + healRate;
             healRound--;
         }

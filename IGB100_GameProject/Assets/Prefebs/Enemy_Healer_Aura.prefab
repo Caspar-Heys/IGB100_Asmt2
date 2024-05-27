@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8359434273900389336, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
       propertyPath: m_Name
       value: Vest
@@ -61,6 +65,16 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2313769828275856933}
   m_SourcePrefab: {fileID: 100100000, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
+--- !u!137 &308418504424362919 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -6748952676147697793, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
+  m_PrefabInstance: {fileID: 2743078868470756568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2363132935133352828 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 493943851400177572, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
+  m_PrefabInstance: {fileID: 2743078868470756568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2421783005479113523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
@@ -92,6 +106,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!137 &3126038312827927718 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 968472909952239742, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
+  m_PrefabInstance: {fileID: 2743078868470756568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &3726134002114202056 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1559578699912838416, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
+  m_PrefabInstance: {fileID: 2743078868470756568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &6584568218082036599 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -184565830354255953, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
+  m_PrefabInstance: {fileID: 2743078868470756568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &7866888187801146444 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5421650685870399636, guid: ff704484170ac79458fcbe32fba6d25c, type: 3}
+  m_PrefabInstance: {fileID: 2743078868470756568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5145646524783791047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       propertyPath: m_Name
-      value: Enemy_Healer
+      value: Enemy_Healer_Aura
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d9bd32f97fec25a4a8395aac05b0123b, type: 3}
       propertyPath: m_Layer
@@ -227,9 +261,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.50913286
-  m_Height: 2.3185122
+  m_Height: 3.3316543
   m_Direction: 1
-  m_Center: {x: 0, y: 0.6592561, z: 0.009132862}
+  m_Center: {x: 0, y: 1.165827, z: 0.009132856}
 --- !u!95 &8058668719450139863
 Animator:
   serializedVersion: 5
@@ -318,7 +352,13 @@ MonoBehaviour:
   token: 3
   score: 200
   isBoss: 0
-  thisRenderer: {fileID: 0}
+  thisRenderers:
+  - {fileID: 3726134002114202056}
+  - {fileID: 308418504424362919}
+  - {fileID: 6584568218082036599}
+  - {fileID: 3126038312827927718}
+  - {fileID: 7866888187801146444}
+  - {fileID: 2363132935133352828}
   deathEffect: {fileID: 159918, guid: a0040bf7072bc2f4e82d887d50a9c5e2, type: 3}
 --- !u!114 &4221733131125851080
 MonoBehaviour:
@@ -333,10 +373,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitingTime: 1
-  heal: 50
-  healRate: 5
-  healRange: 100
-  healRound: 100
+  heal: 300
+  healRate: 3
+  healRange: 10
+  healRound: 10
   effectHeal: {fileID: 7355591424859418038, guid: 2aca54b07a989ba409a7881e368afff7, type: 3}
   healingAnimationCD: 1
 --- !u!114 &-49772475084334908

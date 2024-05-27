@@ -26,6 +26,8 @@ public class Player : MonoBehaviour {
     //UI Elements
     public GameObject uiController;
     [SerializeField] private GameObject playerUI;
+
+    public GameObject effectHeal;
     
     // Use this for initialization
     void Start () {
@@ -94,7 +96,7 @@ public class Player : MonoBehaviour {
             {
                 case 1:
                     killIntention = 0;
-                    USkill_Heal();
+                    USkill_Heal(maxHealth / 2);
                     break;
                 case 2:
                     break;
@@ -110,16 +112,20 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public void USkill_Heal()
+    // this function can also be called by enemy
+    public void USkill_Heal(float h)
     {
-        health += maxHealth / 2;
+        health += h;
         if (health > maxHealth)
         {
             health = maxHealth;
         }
+        GameObject tempHeal = Instantiate(effectHeal, transform.position, transform.rotation);
+        tempHeal.GetComponent<EffectOnObject>().SetTarget(this.gameObject);
         uiController.GetComponent<UIController>().UpdateHpBar(health, maxHealth);
         uiController.GetComponent<UIController>().UpdateKillIntentionBar(killIntention, maxKillIntention, ultimateSkillName);
     }
+
     public void USkill_AdrenalineSurge()
     {
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))

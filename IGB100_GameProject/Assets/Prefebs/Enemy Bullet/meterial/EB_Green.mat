@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BB_Yellow
+  m_Name: EB_Green
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -79,6 +79,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 1}
-    - _EmissionColor: {r: 1109.7802, g: 376.71814, b: 0, a: 1}
+    - _Color: {r: 0, g: 1, b: 0.06359196, a: 1}
+    - _EmissionColor: {r: 0.027848242, g: 0.86037755, b: 0, a: 1}
   m_BuildTextureStacks: []

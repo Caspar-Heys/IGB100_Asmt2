@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour {
     private float flashDuration = 0.0f;
     private float flashDurationMax = 0.2f;
     private bool bright = false;
-    public SkinnedMeshRenderer thisRenderer;
+    public SkinnedMeshRenderer[] thisRenderers;
     private Color currentColour;
     private Color emissionColour;
 
@@ -37,8 +37,11 @@ public class Enemy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         health = healthMax;
-        thisRenderer.material.EnableKeyword("_EMISSION");
-        currentColour = thisRenderer.material.GetColor("_EmissionColor");
+        foreach (SkinnedMeshRenderer eachRenerer in thisRenderers)
+        {
+            eachRenerer.material.EnableKeyword("_EMISSION");
+        }
+        currentColour = thisRenderers[0].material.GetColor("_EmissionColor");
         emissionColour = new Color(1.0f, 0.0f, 0.0f);
     }
 	
@@ -109,12 +112,17 @@ public class Enemy : MonoBehaviour {
                 //Debug.Log("bright = " + bright);
                 if (bright)
                 {
-                    thisRenderer.material.SetColor("_EmissionColor", emissionColour);
-                    
+                    foreach (SkinnedMeshRenderer eachRenerer in thisRenderers)
+                    {
+                        eachRenerer.material.SetColor("_EmissionColor", emissionColour);
+                    }                  
                 }
                 else
                 {
-                    thisRenderer.material.SetColor("_EmissionColor", currentColour);
+                    foreach (SkinnedMeshRenderer eachRenerer in thisRenderers)
+                    {
+                        eachRenerer.material.SetColor("_EmissionColor", currentColour);
+                    }
                 }
                 bright = !bright;
                 hurtFlashingTimer = Time.time;
@@ -122,7 +130,10 @@ public class Enemy : MonoBehaviour {
             flashDuration -= Time.deltaTime;
             if (flashDuration < 0)
             {
-                thisRenderer.material.SetColor("_EmissionColor", currentColour);
+                foreach (SkinnedMeshRenderer eachRenerer in thisRenderers)
+                {
+                    eachRenerer.material.SetColor("_EmissionColor", currentColour);
+                }
                 bright = false;
                 flashDuration = 0;
             }
