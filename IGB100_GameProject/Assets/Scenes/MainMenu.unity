@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -514,6 +514,24 @@ PrefabInstance:
     - target: {fileID: 3042200315960950108, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: killIntentionBar
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3374234107293250207, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
+      propertyPath: m_text
+      value: 'How to play:
+
+        1. WSAD to move
+
+        2. Space bar to jump
+
+        3.
+        Left-Shift to run
+
+        4. Left-Mouse button to shoot
+
+        5. R to
+        reload
+
+        6. F to use skill'
       objectReference: {fileID: 0}
     - target: {fileID: 5699130105625321664, guid: b72a9838d502f4c2c8f8d43a39393ca9, type: 3}
       propertyPath: m_AnchorMax.x
