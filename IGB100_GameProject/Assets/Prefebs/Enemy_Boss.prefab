@@ -1105,7 +1105,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   shootSpreadRate: 1
   shootSpreadAngle: 10
   shootSpreadNumber: 7
-  bulletSpeed: 8
+  bulletSpeed: 10
   muzzleEffect: {fileID: 4493765536514330118, guid: a92027a88f5b1414db07df8c5fea2863, type: 3}
   fireSound: {fileID: 6698515458232812333, guid: cec19e9b5abb7fd45a124692d2073359, type: 3}
   speed: 16

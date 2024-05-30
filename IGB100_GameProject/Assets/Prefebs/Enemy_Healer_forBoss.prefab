@@ -198,7 +198,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthMax: 100
   hitDamage: 10
-  killIntention: 10
+  killIntention: 30
   token: 3
   score: 200
   isBoss: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a3948a24dae534da6e83107b68c3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitingTime: 5
+  waitingTime: 7
   heal: 300
   healRate: 5
   healRange: 10
