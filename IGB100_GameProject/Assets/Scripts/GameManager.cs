@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public Transform[] teleportPointInRooms;
     public Transform teleportPointInLounge;
     public GameObject door;
+    public GameObject portalController;
 
     public GameObject[] enemySpawnerInEachRoom;
     public GameObject[] enemySpawnerInEachRoomHard;
@@ -145,6 +146,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isRoomClear && currentEnemyCount <= 0)
         {
+            portalController.GetComponent<PortalController>().ShowPortal(currentRoom);
             currentRoom++;
             isRoomClear = true;
             if (currentRoom >= roomMax)
@@ -153,10 +155,11 @@ public class GameManager : MonoBehaviour
                 currentRoom = roomMax - 1;
             }
             uiController.GetComponent<UIController>().ShowRoomClearUI();
-            GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
-            GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
-            GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
-            GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
+         
+            //GameObject.FindWithTag("Player").GetComponent<PlayerLook>().enabled = false;
+            //GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
+            //GameObject.FindWithTag("Player").GetComponent<Interaction>().enabled = false;
+            //GameObject.FindWithTag("Player").GetComponentInChildren<PlayerGun>().enabled = false;
         } 
     }
 
@@ -164,7 +167,9 @@ public class GameManager : MonoBehaviour
     {
         player.GetComponent<Player>().Teleport(teleportPointInLounge.transform);
         //player.transform.position = teleportPointInLounge.position;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
+        uiController.GetComponent<UIController>().HideRoomClearUI();
+
     }
 
     private void AutoTeleportToRoom()

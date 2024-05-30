@@ -1133,6 +1133,7 @@ MonoBehaviour:
   hitDamage: 0
   killIntention: 10
   token: 30
+  tokenObject: {fileID: 2683919459002841722, guid: 18453cdf4e3646b43a0ff3ef1fac053f, type: 3}
   score: 5000
   isBoss: 1
   thisRenderers:

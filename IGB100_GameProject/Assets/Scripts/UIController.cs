@@ -180,8 +180,8 @@ public class UIController : MonoBehaviour
     public void ShowRoomClearUI()
     {
         roomClearUI.SetActive(true);
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.None;
     }
     public void HideRoomClearUI()
     {

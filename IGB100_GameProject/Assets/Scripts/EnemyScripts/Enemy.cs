@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour {
 
     public float killIntention = 10.0f;
     public int token = 1;
+    public GameObject tokenObject;
     public int score = 100;
 
     public bool isBoss = false;
@@ -177,7 +178,9 @@ public class Enemy : MonoBehaviour {
     void OnDestroy()
     {
         Instantiate(deathEffect, transform.position, transform.rotation);
-        GameManager.instance.player.GetComponent<Player>().tokens += token;
+        GameObject tempToken = Instantiate(tokenObject, transform.position, transform.rotation);
+        tempToken.GetComponent<Token>().SetTokenValue(token);
+        //GameManager.instance.player.GetComponent<Player>().tokens += token;
         GameManager.instance.score += score;
         GameManager.instance.player.GetComponent<Player>().AddKillIntention(killIntention);
         GameManager.instance.ReduceEnemyCount(1);
